@@ -4,7 +4,7 @@ Switch ifadəsi müəyyən şərtlər əsasında müxtəlif əməliyyatları yer
 
 ```golang
 day := "sunday"
-​
+
 switch day {
 case "monday":
     fmt.Println("Today is Monday")
