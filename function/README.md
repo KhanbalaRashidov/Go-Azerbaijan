@@ -26,4 +26,3 @@ Bu nümunədə, swap adlı bir funksiya təyin edilir. Funksiya, a və b adlı i
 
 <br><br>
 
-

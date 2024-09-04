@@ -376,3 +376,71 @@ Bu nümunədə, ages adlı bir Map təyin edilir və string tipində açarlar v�
 
 
 <br><br>
+
+# Functions
+
+Funksiya, Go proqramlaşdırma dilində, müəyyən bir vəzifəni yerinə yetirən kod bloklarını ifadə edir. Bir funksiya, bir və ya bir neçə parametr ala bilər, bir əməliyyatı həyata keçirə bilər və bir və ya bir neçə nəticə qaytara bilər.
+
+```golang
+func add(a int, b int) int {
+return a + b
+}
+
+result := add(5, 10)
+fmt.Println(result)
+```
+
+Bu nümunədə, add adlı bir funksiya təyin edilir. Funksiya, a və b adlı iki int tipində parametr qəbul edir və bu parametrlər toplanaraq nəticə int tipində geri qaytarılır. add funksiyası, 5 və 10 parametrləri ilə çağırılır və nəticə fmt.Println(result) ifadəsi ilə yazdırılır.
+
+```golang
+func swap(a, b string) (string, string) {
+    return b, a
+}
+
+x, y := swap("hello", "world")
+fmt.Println(x, y)
+```
+
+Bu nümunədə, swap adlı bir funksiya təyin edilir. Funksiya, a və b adlı iki string tipində parametr qəbul edir və bu parametrləri bir-biri ilə dəyişdirərək geri qaytarır. swap funksiyası, "hello" və "world" parametrləri ilə çağırılır və geri qaytarılan nəticələr x və y dəyişənləri tərəfindən qəbul edilir. Nəticələr fmt.Println(x, y) ifadəsi ilə yazdırılır.
+
+<br><br>
+
+
+# Variadic Functions
+
+Variadic funksiyalar, Go proqramlaşdırma dilində dəyişən sayda arqument qəbul edən funksiyalardır. Bu funksiyalar bir və ya daha çox arqument qəbul edə bilər və arqumentlərin sayını dəyişən olaraq təyin etməyə imkan verir.
+
+```golang
+func sum(nums ...int) int {
+    total := 0
+    for _, num := range nums {
+        total += num
+    }
+    return total
+}
+
+fmt.Println(sum(1, 2, 3, 4, 5))
+fmt.Println(sum(2, 4, 6))
+```
+
+Bu nümunədə, sum adlı bir funksiya təyin edilir. Funksiya, nums adlı int tipində dəyişən sayda parametr qəbul edir və onların cəmini qaytarır. Funksiyanın daxilində for dövrü istifadə edərək, nums dilimindəki bütün elementlərin cəmi hesablanır. Funksiya sum(1, 2, 3, 4, 5) və sum(2, 4, 6) şəklində çağırılır və nəticələr ekrana yazdırılır.
+
+```golang
+func concatenate(sep string, strs ...string) string {
+    result := ""
+    for i, str := range strs {
+        if i > 0 {
+            result += sep
+        }
+        result += str
+    }
+    return result
+}
+
+fmt.Println(concatenate(", ", "foo", "bar", "baz"))
+fmt.Println(concatenate("-", "hello", "world"))
+```
+
+Bu nümunədə, concatenate adlı bir funksiya təyin edilir. Funksiya, sep adlı string tipində bir parametr və strs adlı dəyişən sayda string tipində parametrlər qəbul edir. Funksiyanın daxilində for dövrü istifadə edilərək, strs dilimindəki bütün elementlər birləşdirilir və sep ayracı ilə birgə yazılır. Funksiya concatenate(", ", "foo", "bar", "baz") və concatenate("-", "hello", "world") şəklində çağırılır və nəticələr ekrana yazdırılır.
+
+<br><br>
