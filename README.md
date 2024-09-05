@@ -242,7 +242,7 @@ Switch ifadəsi müəyyən şərtlər əsasında müxtəlif əməliyyatları yer
 
 ```golang
 day := "sunday"
-​
+
 switch day {
 case "monday":
     fmt.Println("Today is Monday")
@@ -485,3 +485,39 @@ fmt.Println(x, y)
 Bu nümunədə, swap adlı funksiya iki pointer (*int) qəbul edir və həmin dəyişənlərin dəyərlərini bir-biri ilə dəyişir. x-ə 5 və y-ə 10 dəyəri verilir. swap(&x, &y) çağırıldıqdan sonra, x 10 olur, y isə 5 olur.
 
 <br><br>
+
+# Recursion
+
+Recursion, Go proqramlaşdırma dilində bir funksiyanın özünü çağırması ilə təkrarlanan bir prosesdir. Bu, müəyyən bir şərt yerinə yetirildikdə dayanır və adətən məsələlərin daha sadə formalarını həll edərək sonuca çatmağı təmin edir.
+
+```golang
+func factorial(n int) int {
+    if n == 0 {
+        return 1
+    }
+    return n * factorial(n-1)
+}
+
+fmt.Println(factorial(5))
+```
+
+Bu nümunədə, factorial adlı bir funksiya təyin edilir. Funksiya int tipində bir parametr qəbul edir və həmin parametrin faktoriyelini hesablayır.
+
+Əgər n 0-a bərabərdirsə, 1 qaytarılır (0! = 1).
+Əks halda, funksiya özünü çağıraraq, n * factorial(n-1) ilə faktoriyeli rekursiv şəkildə hesablayır.
+
+```golang
+func fibonacci(n int) int {
+    if n < 2 {
+        return n
+    }
+    return fibonacci(n-1) + fibonacci(n-2)
+}
+
+fmt.Println(fibonacci(10))
+```
+
+Bu nümunədə, fibonacci adlı bir funksiya təyin edilir. Funksiya, int tipində bir parametr qəbul edir və Fibonacci ardıcıllığındakı n-ci dəyəri hesablayır.
+
+Əgər n 2-dən kiçikdirsə, sadəcə n qaytarılır.
+Əks halda, Fibonacci düsturu ilə fibonacci(n-1) + fibonacci(n-2) rekursiv şəkildə hesablanır.
