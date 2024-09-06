@@ -2,7 +2,7 @@
 
 for dövür operatırı, Go programlasdırma dilində, müəyyən bir şərt doğru olduğu halda təkrarlanan kod bloklarını ifadə etmək üçün istifadə olunur. for dövrü, bir başlanğıc halı, bir şərt və bir addım dəyərinə sahibdir.
 
-```golang
+```go
 for i := 0; i < 5; i++ {
     fmt.Println(i)
 }
@@ -12,7 +12,7 @@ Bu nümunədə, for dövrü, i dəyişəninin 0 dəyərindən başlayaraq, i də
 
 for dövrü, şərt hissəsi doğru olana qədər təkrarlanır. Şərt hissəsi doğru olmadığında, dövr sonlanır. Ayrıca, for dövrü break və ya continue ifadələri ilə də idarə edilə bilir.
 
-```golang
+```go
 for i := 0; i < 10; i++ {
     if i == 3 {
         break
@@ -32,7 +32,7 @@ Dövr içindəki digər if şərti isə, əgər i dəyəri cüt ədəddirsə bir
 
 Sonsuz dövr yaratmaq üçün aşağıdakı nümunəyə baxaq.
 
-```golang
+```go
 i:=0
 for  {
     if i == 100 {
@@ -45,6 +45,3 @@ for  {
 ```
 
 Bu nümunədə i dəyişənimizə 0 dəyərini mənimsədirik. Daha sonra dövr daxilində i əgər 100-ə bərabər olarsa break ifadəsi ilə dövrü sonlandırırıq, əks halda dövr davam edəcəkdir
-
-\
-\

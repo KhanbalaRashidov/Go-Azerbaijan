@@ -4,11 +4,10 @@ Sabitlər (constants) Go proqramlaşdırma dilində proqramın heç bir yerində
 
 Sabitlər const açar sözü ilə müəyyən edilir və onların məlumat növləri göstərilir. Sabitlər işə salınmalıdır və sonra dəyişdirilə bilməz.
 
-```golang
+```go
 const pi = 3.14159
 const welcomeMessage = "Welcome to Go programming"
-````
-
+```
 
 Bu nümunədə, sabit pi float64 növü kimi müəyyən edilir və 3.14159-a mənimsədilir. Sonra, welcomeMessage sabiti sətir kimi müəyyən edilir və "Welcome to Go programming" olaraq işə salınır.
 
