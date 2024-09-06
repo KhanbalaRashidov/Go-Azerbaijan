@@ -24,4 +24,5 @@
 * [Pointers](pointers/README.md)
 * [Strings and Runes](strings\_and\_runs/README.md)
 * [Structs](structs/README.md)
+* [Method](method.md)
 * [README](readme-1.md)
