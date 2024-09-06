@@ -486,38 +486,35 @@ Bu nümunədə, swap adlı funksiya iki pointer (*int) qəbul edir və həmin d�
 
 <br><br>
 
-# Recursion
+# Strings and Runes
 
-Recursion, Go proqramlaşdırma dilində bir funksiyanın özünü çağırması ilə təkrarlanan bir prosesdir. Bu, müəyyən bir şərt yerinə yetirildikdə dayanır və adətən məsələlərin daha sadə formalarını həll edərək sonuca çatmağı təmin edir.
-
-```golang
-func factorial(n int) int {
-    if n == 0 {
-        return 1
-    }
-    return n * factorial(n-1)
-}
-
-fmt.Println(factorial(5))
-```
-
-Bu nümunədə, factorial adlı bir funksiya təyin edilir. Funksiya int tipində bir parametr qəbul edir və həmin parametrin faktoriyelini hesablayır.
-
-Əgər n 0-a bərabərdirsə, 1 qaytarılır (0! = 1).
-Əks halda, funksiya özünü çağıraraq, n * factorial(n-1) ilə faktoriyeli rekursiv şəkildə hesablayır.
+Strings, Go proqramlaşdırma dilində, Unicode simvollarının birləşdirilməsi ilə yaradılan bir simvol sətiridir. Hər bir simvol 1-4 byte arasında dəyişən ölçülərdə ola bilər.
 
 ```golang
-func fibonacci(n int) int {
-    if n < 2 {
-        return n
-    }
-    return fibonacci(n-1) + fibonacci(n-2)
-}
-
-fmt.Println(fibonacci(10))
+str := "hello"
+fmt.Println(str)
+fmt.Println(str[0])
+fmt.Println(str[1:3])
 ```
 
-Bu nümunədə, fibonacci adlı bir funksiya təyin edilir. Funksiya, int tipində bir parametr qəbul edir və Fibonacci ardıcıllığındakı n-ci dəyəri hesablayır.
+Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "hello" dəyəri verilir. str dəyişəni ekrana çap olunur, sonra isə str[0] ifadəsi istifadə edilərək sətirin ilk simvolu olan "h" ekrana çap edilir. str[1:3] ifadəsi istifadə edilərək sətirin ikinci və üçüncü simvolları olan "el" ekrana çap edilir.
 
-Əgər n 2-dən kiçikdirsə, sadəcə n qaytarılır.
-Əks halda, Fibonacci düsturu ilə fibonacci(n-1) + fibonacci(n-2) rekursiv şəkildə hesablanır.
+```golang
+for i, r := range "hello" {
+    fmt.Printf("%d: %s\n", i, string(r))
+}
+```
+
+Bu nümunədə, for döngüsü istifadə edilərək range funksiyası ilə "hello" stringindəki hər bir simvola giriş edilir. Hər simvolun mövqeyi və dəyəri ekrana çap olunur. Runes, Go proqramlaşdırma dilində, bir Unicode simvolunun birləşməsini ifadə edən bir məlumat tipidir. Runes, 1-4 bayt arasında dəyişən ölçülərdə ola bilən simvolları təmsil etmək üçün istifadə olunur.
+
+```golang
+str := "こんにちは"
+for i, r := range str {
+    fmt.Printf("%d: %c\n", i, r)
+}
+```
+
+Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "こんにちは" dəyəri verilir. for döngüsü istifadə edilərək range funksiyası ilə hər bir simvola giriş edilir və simvolun mövqeyi və dəyəri ekrana çap olunur.
+
+
+<br><br>
