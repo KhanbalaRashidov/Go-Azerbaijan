@@ -10,7 +10,7 @@ for i := 0; i < 5; i++ {
 
 Bu nümunədə, for dövrü, i dəyişəninin 0 dəyərindən başlayaraq, i dəyişəni < 5 şərtini ödədiyi müddətcə təkrarlanan bir dövrdür. Dövrdəki hər adımdda i dəyişəni 1 artırılır və nəticədə i dəyəri 4 olur.
 
-for dövrü, şərt hissəsi doğru olana qədər təkrarlanır. Şərt hissəsi doğru olmadığında, dövr sonlanır. Ayrıca, for dövrü break və ya continue ifadələri ilə də idarə  edilə bilir.
+for dövrü, şərt hissəsi doğru olana qədər təkrarlanır. Şərt hissəsi doğru olmadığında, dövr sonlanır. Ayrıca, for dövrü break və ya continue ifadələri ilə də idarə edilə bilir.
 
 ```golang
 for i := 0; i < 10; i++ {
@@ -24,7 +24,7 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-Bu nümunədə, for dövrü, i dəyişəninin 0 dəyərindən başlayaraq, i dəyişəni < 10 şərtini ödəyənədək  təkrarlanan bir dövrdür. Dövrdəki hər adımdda, i dəyişəni 1 artırılır.
+Bu nümunədə, for dövrü, i dəyişəninin 0 dəyərindən başlayaraq, i dəyişəni < 10 şərtini ödəyənədək təkrarlanan bir dövrdür. Dövrdəki hər adımdda, i dəyişəni 1 artırılır.
 
 Dövr, if şərti ilə kəsilir ve break ifadesi işə düşür. Ayrıca, i dəyəri 3 olduğunda da dövr sonlanır.
 
@@ -46,8 +46,5 @@ for  {
 
 Bu nümunədə i dəyişənimizə 0 dəyərini mənimsədirik. Daha sonra dövr daxilində i əgər 100-ə bərabər olarsa break ifadəsi ilə dövrü sonlandırırıq, əks halda dövr davam edəcəkdir
 
-
-<br><br>
-
-
-
+\
+\

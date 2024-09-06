@@ -9,7 +9,7 @@ fmt.Println(str[0])
 fmt.Println(str[1:3])
 ```
 
-Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "hello" dəyəri verilir. str dəyişəni ekrana çap olunur, sonra isə str[0] ifadəsi istifadə edilərək sətirin ilk simvolu olan "h" ekrana çap edilir. str[1:3] ifadəsi istifadə edilərək sətirin ikinci və üçüncü simvolları olan "el" ekrana çap edilir.
+Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "hello" dəyəri verilir. str dəyişəni ekrana çap olunur, sonra isə str\[0] ifadəsi istifadə edilərək sətirin ilk simvolu olan "h" ekrana çap edilir. str\[1:3] ifadəsi istifadə edilərək sətirin ikinci və üçüncü simvolları olan "el" ekrana çap edilir.
 
 ```golang
 for i, r := range "hello" {
@@ -28,5 +28,5 @@ for i, r := range str {
 
 Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "こんにちは" dəyəri verilir. for döngüsü istifadə edilərək range funksiyası ilə hər bir simvola giriş edilir və simvolun mövqeyi və dəyəri ekrana çap olunur.
 
-
-<br><br>
+\
+\
