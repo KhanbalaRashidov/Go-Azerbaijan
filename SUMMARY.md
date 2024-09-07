@@ -27,3 +27,6 @@
 * [Method](method.md)
 * [Interface](interface.md)
 * [Struct embedding](struct-embedding.md)
+* [Errors](errors.md)
+* [Goroutines](goroutines.md)
+* [Channel](channel.md)
