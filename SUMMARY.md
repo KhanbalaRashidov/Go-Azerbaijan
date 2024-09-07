@@ -26,3 +26,4 @@
 * [Structs](structs/README.md)
 * [Method](method.md)
 * [Interface](interface.md)
+* [Struct embedding](struct-embedding.md)
