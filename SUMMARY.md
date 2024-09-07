@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Bu Go nədir?](README.md)
-* [Values](<README (1).md>)
+* [Values](values.md)
 * [Variables](variables/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
@@ -26,4 +26,3 @@
 * [Structs](structs/README.md)
 * [Method](method.md)
 * [Interface](interface.md)
-* [README](readme-1.md)
