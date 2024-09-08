@@ -30,3 +30,4 @@
 * [Errors](errors.md)
 * [Goroutines](goroutines.md)
 * [Channel](channel.md)
+* [Select](select.md)

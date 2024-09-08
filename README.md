@@ -1,10 +1,12 @@
 # Bu Go nədir?
 
+## Bu Go nədir?
+
 Bu repository Go dilini tez öyrənmək istəyənlər üçün hazırlanmışdır. Ümumilikdə mövzuları nümunələrlə izah edərək dilin əsas strukturlarını əhatə edir. Eyni zamanda, Go dilini öyrənmək istəyənlər üçün müntəzəm resurs təmin etmək məqsədi daşıyır. Hər bir mövzu təsviri və başa düşülən şəkildə əhatə olunur ki, oxucular Go dilini asanlıqla və tez öyrənə bilsinlər.
 
 Repository-ni bəyənirsinizsə, ulduz qoyub sosial media hesablarınızda paylaşa bilərsiniz ki, daha çox insana çatsın ⭐️.
 
-#### Bu Go nədir?
+**Bu Go nədir?**
 
 Golang (digər adı Go) 2007-ci ildən Google tərəfindən hazırlanmış açıq mənbəli proqramlaşdırma dilidir. O, əsasən alt sistem proqramlaşdırması üçün nəzərdə tutulmuşdur və tərtib edilə bilən və statik olaraq yazılmış dildir. İlk versiya 2009-cu ilin noyabrında buraxıldı. Onun tərtibçisi "gc" (Go Compiler) bir çox əməliyyat sistemi üçün açıq mənbə kimi işlənib hazırlanmışdır.
 
@@ -20,53 +22,53 @@ Go dilinin digər mühüm xüsusiyyəti onun effektiv paket idarəetmə sistemid
 
 Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, yüngül sintaksis strukturu, effektiv paket idarəetməsi, zibil toplama və kapsullaşdırılmış tip sistemlər kimi xüsusiyyətlər daxildir. Go-da inkişaf etdirmək bir çox proqram növləri üçün əlverişli seçimdir və proqram təminatının hazırlanması prosesini sürətləndirməyə kömək edə bilər.
 
-### Məzmun:
+#### Məzmun:
 
-* [Values](<README (1).md#values>)
-* [Variables](<README (1).md#variables>)
-* [Constants](<README (1).md#constants>)
-* [If-Else](<README (1).md#if-else>)
-* [For](<README (1).md#for>)
-* [Switch](<README (1).md#switch>)
-* [Arrays](<README (1).md#arrays>)
-* [Slices](<README (1).md#slices>)
-* [Maps](<README (1).md#maps>)
-* [Range](<README (1).md#range>)
-* [Functions](<README (1).md#functions>)
-* [Variadic Functions](<README (1).md#variadic-functions>)
-* [Closures](<README (1).md#closures>)
-* [Recursion](<README (1).md#recursion>)
-* [Pointers](<README (1).md#pointers>)
-* [String Functions](<README (1).md#string-functions>)
-* [Structs](<README (1).md#structs>)
-* [Methods](<README (1).md#methods>)
-* [Interfaces](<README (1).md#interfaces>)
-* [Struct Embedding](<README (1).md#struct-embedding>)
-* [Errors](<README (1).md#errors>)
-* [Goroutines](<README (1).md#goroutines>)
-* [Channel](<README (1).md#channel>)
-* [Select](<README (1).md#select>)
-* [Timeouts](<README (1).md#timeouts>)
-* [Non-Blocking Channel](<README (1).md#non-blocking-channel>)
-* [Closing Channels](<README (1).md#closing-channels>)
-* [Range over Channels](<README (1).md#range-over-channels>)
-* [Timers](<README (1).md#timers>)
-* [Tickers](<README (1).md#tickers>)
-* [Worker Pools](<README (1).md#worker-pools>)
-* [Wait Groups](<README (1).md#wait-groups>)
-* [Rate Limiting](<README (1).md#rate-limiting>)
-* [Atomic Counters](<README (1).md#atomic-counters>)
-* [Sorting](<README (1).md#sorting>)
-* [Panic](<README (1).md#panic>)
-* [Defer](<README (1).md#defer>)
-* [Recover](<README (1).md#recover>)
-* [Strings and Runes](<README (1).md#strings-and-runes>)
-* [Text Templates](<README (1).md#text-templates>)
-* [JSON](<README (1).md#json>)
+* [Values](README%20\(1\).md#values)
+* [Variables](README%20\(1\).md#variables)
+* [Constants](README%20\(1\).md#constants)
+* [If-Else](README%20\(1\).md#if-else)
+* [For](README%20\(1\).md#for)
+* [Switch](README%20\(1\).md#switch)
+* [Arrays](README%20\(1\).md#arrays)
+* [Slices](README%20\(1\).md#slices)
+* [Maps](README%20\(1\).md#maps)
+* [Range](README%20\(1\).md#range)
+* [Functions](README%20\(1\).md#functions)
+* [Variadic Functions](README%20\(1\).md#variadic-functions)
+* [Closures](README%20\(1\).md#closures)
+* [Recursion](README%20\(1\).md#recursion)
+* [Pointers](README%20\(1\).md#pointers)
+* [String Functions](README%20\(1\).md#string-functions)
+* [Structs](README%20\(1\).md#structs)
+* [Methods](README%20\(1\).md#methods)
+* [Interfaces](README%20\(1\).md#interfaces)
+* [Struct Embedding](README%20\(1\).md#struct-embedding)
+* [Errors](README%20\(1\).md#errors)
+* [Goroutines](README%20\(1\).md#goroutines)
+* [Channel](README%20\(1\).md#channel)
+* [Select](README%20\(1\).md#select)
+* [Timeouts](README%20\(1\).md#timeouts)
+* [Non-Blocking Channel](README%20\(1\).md#non-blocking-channel)
+* [Closing Channels](README%20\(1\).md#closing-channels)
+* [Range over Channels](README%20\(1\).md#range-over-channels)
+* [Timers](README%20\(1\).md#timers)
+* [Tickers](README%20\(1\).md#tickers)
+* [Worker Pools](README%20\(1\).md#worker-pools)
+* [Wait Groups](README%20\(1\).md#wait-groups)
+* [Rate Limiting](README%20\(1\).md#rate-limiting)
+* [Atomic Counters](README%20\(1\).md#atomic-counters)
+* [Sorting](README%20\(1\).md#sorting)
+* [Panic](README%20\(1\).md#panic)
+* [Defer](README%20\(1\).md#defer)
+* [Recover](README%20\(1\).md#recover)
+* [Strings and Runes](README%20\(1\).md#strings-and-runes)
+* [Text Templates](README%20\(1\).md#text-templates)
+* [JSON](README%20\(1\).md#json)
 
 ***
 
-### Values
+#### Values
 
 Dəyərlər Go proqramlaşdırma dilində dəyişənlər tərəfindən daşınan məlumatlardır. Dəyərlər sabit və ya dəyişən ola bilər və müxtəlif məlumat növlərini təmsil edir.
 
@@ -90,7 +92,7 @@ Bu nümunədə yaş dəyişəni ilk olaraq int kimi elan edilir və sonra dəyi�
 
 ***
 
-### Variables
+#### Variables
 
 Dəyişənlər Go proqramlaşdırma dilində məlumatların saxlanması üçün istifadə olunan əsaslardan biridir. Dəyişənə qiymət təyin etməklə biz proqramda həmin dəyişənin saxladığı qiymətdən istifadə edə bilərik.
 
@@ -116,7 +118,7 @@ Daha sonra yaş dəyişəninə "thirty-two" sətri təyin edilməyə çalışıl
 
 Dəyişənlər proqramlarda müəyyən bir məqsədə xidmət etmək üçün istifadə olunur. Məsələn, istifadəçinin adı, yaşı və ya bir sıra ədədi dəyərlər saxlanıla bilər.
 
-### Constants
+#### Constants
 
 Sabitlər (constants) Go proqramlaşdırma dilində proqramın heç bir yerində dəyişdirilə bilməyən sabit dəyərlərdir. Sabitlər bir dəfə müəyyən edilir və sonra proqramın istənilən yerində istifadə edilə bilər.
 
@@ -133,7 +135,7 @@ Sabitlər müəyyən bir məqsəd üçün istifadə ediləcək proqramların sab
 
 Sabitlər proqramın istənilən yerində istifadə oluna bildiyi üçün onlar müxtəlif fayllar arasında da paylaşıla bilər. Bundan əlavə, sabitlərin dəyişdirilə bilməməsi proqram səhvlərini azaldır və təhlükəsizliyi artırır.
 
-### if/else
+#### if/else
 
 if və else ifadələri, Go programlaşdırma dilində, müəyyən şərtlərin doğru və ya yanlış olduğu hallarda fərqli kod bloklarının işləməsini həyata keçirir.
 
@@ -162,7 +164,7 @@ if x > 10 && x < 20 {
 
 Bu nümunədə, if ifadəsi, x dəyişənin 10 ve 20 arasında olması halında "x is between 10 and 20" mətnini yazdıracaqdır. Əgər x dəyişəni 10 ve 20 arasında deyilsə, else if ifadesi yoxlanılacaq və x dəyişənin 20 və 30 arasında olması halında "x is between 20 and 30" mətnini yazdıracaqdır. Əgər x dəyişəni 10 və 30 arasında deyilsə, else bloku işələyəcəkdir və "x is not between 10 and 30" mətnini yazdıracaqdır.
 
-### For
+#### For
 
 for dövür operatırı, Go programlasdırma dilində, müəyyən bir şərt doğru olduğu halda təkrarlanan kod bloklarını ifadə etmək üçün istifadə olunur. for dövrü, bir başlanğıc halı, bir şərt və bir addım dəyərinə sahibdir.
 
@@ -210,7 +212,7 @@ for  {
 
 Bu nümunədə i dəyişənimizə 0 dəyərini mənimsədirik. Daha sonra dövr daxilində i əgər 100-ə bərabər olarsa break ifadəsi ilə dövrü sonlandırırıq, əks halda dövr davam edəcəkdir
 
-### Switch
+#### Switch
 
 Switch ifadəsi müəyyən şərtlər əsasında müxtəlif əməliyyatları yerinə yetirmək üçün Go proqramlaşdırma dilində istifadə olunur:
 
@@ -256,7 +258,7 @@ default:
 
 Bu misalda switch ifadəsi x dəyişəninin qiymətindən asılı olaraq müxtəlif əməliyyatlar yerinə yetirir. Əgər x dəyişəni 1-dirsə, o, "x-1-dir" mətnini çap edir. Əgər x dəyişəni 2-dirsə, o, "x-2-dir" mətnini çap edir. Əgər x dəyişəni 3-dürsə, o, “x-3-dür” mətnini çap edir. Əgər x dəyişəni 1, 2 və ya 3 deyilsə, standart blok işləyəcək və "x is not 1, 2 or 3" mətnini çap edəcək.
 
-### Arrays
+#### Arrays
 
 Array , Go proqramlaşdırma dilində eyni tipdə bir neçə dəyişəni tək bir dəyişkəndə saxlamağa imkan verən bir məlumat strukturudur. Bir array əvvəlcədən müəyyən edilmiş ölçüyə və müəyyən bir məlumat tipinə malikdir.
 
@@ -281,7 +283,7 @@ fmt.Println(a)
 
 Bu nümunədə, a adlı bir array müəyyən edilir və elementləri {1, 2, 3, 4, 5} olaraq təyin edilir. Array-in ölçüsü elementlərin sayına bərabər olmalıdır. Bu nümunədə, a adlı array {1, 2, 3, 4, 5} dəyərləri ilə başlatılır və bütün elementləri ekrana çıxarılır.
 
-### Slices
+#### Slices
 
 Dilimin əsas məlumat strukturlarından biri olan slices, Go proqramlaşdırma dilində ölçüsü dəyişdirilə bilən, elastik bir array məlumat strukturdur. Slices, array-lərin bir alt hissəsi kimi qəbul edilə bilər və Go dilində tez-tez istifadə olunur.
 
@@ -311,7 +313,7 @@ fmt.Println(b)
 
 Bu nümunədə, a adlı bir dilim təyin edilir və elementlərinə {1, 2, 3, 4, 5} dəyərləri verilir. b adlı bir dilim isə a diliminin 1-ci indeksindən 4-cü indeksinə qədər olan alt hissəsini əhatə edir. b dilimindəki elementlər {2, 3, 4} olaraq göstərilir.
 
-### Maps
+#### Maps
 
 Map, Go proqramlaşdırma dilində bir açar-dəyər cütləri kolleksiyasıdır. Map məlumat strukturu, digər proqramlaşdırma dillərindəki dictionary, hash table və ya associative array kimi məlumat strukturlarına bənzəyir. Bir Map məlumat strukturu, müəyyən bir açar üçün bir dəyər saxlayır.
 
@@ -339,7 +341,7 @@ fmt.Println(ages)
 
 Bu nümunədə, ages adlı bir Map təyin edilir və string tipində açarlar və int tipində dəyərlərlə əlaqəli cütlər təyin olunur. Map məlumat strukturunun yaradılması və elementlərin əlavə edilməsi make() funksiyası ilə birləşdirilərək də həyata keçirilə bilər.
 
-### Functions
+#### Functions
 
 Funksiya, Go proqramlaşdırma dilində, müəyyən bir vəzifəni yerinə yetirən kod bloklarını ifadə edir. Bir funksiya, bir və ya bir neçə parametr ala bilər, bir əməliyyatı həyata keçirə bilər və bir və ya bir neçə nəticə qaytara bilər.
 
@@ -365,7 +367,7 @@ fmt.Println(x, y)
 
 Bu nümunədə, swap adlı bir funksiya təyin edilir. Funksiya, a və b adlı iki string tipində parametr qəbul edir və bu parametrləri bir-biri ilə dəyişdirərək geri qaytarır. swap funksiyası, "hello" və "world" parametrləri ilə çağırılır və geri qaytarılan nəticələr x və y dəyişənləri tərəfindən qəbul edilir. Nəticələr fmt.Println(x, y) ifadəsi ilə yazdırılır.
 
-### Variadic Functions
+#### Variadic Functions
 
 Variadic funksiyalar, Go proqramlaşdırma dilində dəyişən sayda arqument qəbul edən funksiyalardır. Bu funksiyalar bir və ya daha çox arqument qəbul edə bilər və arqumentlərin sayını dəyişən olaraq təyin etməyə imkan verir.
 
@@ -402,7 +404,7 @@ fmt.Println(concatenate("-", "hello", "world"))
 
 Bu nümunədə, concatenate adlı bir funksiya təyin edilir. Funksiya, sep adlı string tipində bir parametr və strs adlı dəyişən sayda string tipində parametrlər qəbul edir. Funksiyanın daxilində for dövrü istifadə edilərək, strs dilimindəki bütün elementlər birləşdirilir və sep ayracı ilə birgə yazılır. Funksiya concatenate(", ", "foo", "bar", "baz") və concatenate("-", "hello", "world") şəklində çağırılır və nəticələr ekrana yazdırılır.
 
-### Pointers
+#### Pointers
 
 Pointers, Go proqramlaşdırma dilində, bir dəyişənin yaddaş ünvanını saxlayan bir məlumat tipidir. Yaddaş ünvanı, dəyişənin yaddaşda yerləşdiyi yerdir.
 
@@ -441,7 +443,7 @@ fmt.Println(x, y)
 
 Bu nümunədə, swap adlı funksiya iki pointer (\*int) qəbul edir və həmin dəyişənlərin dəyərlərini bir-biri ilə dəyişir. x-ə 5 və y-ə 10 dəyəri verilir. swap(\&x, \&y) çağırıldıqdan sonra, x 10 olur, y isə 5 olur.
 
-### Strings and Runes
+#### Strings and Runes
 
 Strings, Go proqramlaşdırma dilində, Unicode simvollarının birləşdirilməsi ilə yaradılan bir simvol sətiridir. Hər bir simvol 1-4 byte arasında dəyişən ölçülərdə ola bilər.
 
@@ -471,7 +473,7 @@ for i, r := range str {
 
 Bu nümunədə, str adlı bir string dəyişəni təyin edilir və "こんにちは" dəyəri verilir. for döngüsü istifadə edilərək range funksiyası ilə hər bir simvola giriş edilir və simvolun mövqeyi və dəyəri ekrana çap olunur.
 
-### Structs
+#### Structs
 
 Structlar, Go proqramlaşdırma dilində, fərqli məlumat tiplərini özündə birləşdirən bir məlumat quruluşudur. Bu quruluşda, müxtəlif məlumat tiplərinə sahib məlumatları bir arada saxlaya və bu məlumatlar üzərində əməliyyatlar apara bilərsiniz.
 
@@ -506,7 +508,7 @@ fmt.Println(r.area())
 
 Bu nümunədə, Rectangle adlı bir struct yaradılır və width adlı bir float64 tipində və height adlı bir float64 tipində iki xüsusiyyət təyin edilir. area adlı bir funksiya, Rectangle tipində bir parametr qəbul edir və düzbucaqlının sahəsini hesablayır. Funksiyanın qaytardığı nəticə düzbucaqlının sahəsidir. r adlı bir Rectangle dəyişəni yaradılır və width və height xüsusiyyətlərinə 3.0 və 4.0 dəyərləri verilir. r.area() ifadəsi istifadə edilərək, düzbucaqlının sahəsi hesablanır və nəticə ekrana çap edilir.
 
-## Methods
+### Methods
 
 Metodlar, Go proqramlaşdırma dilində, bir məlumat quruluşuna məxsus əməliyyatları yerinə yetirmək üçün istifadə edilən funksiya növüdür. Bu əməliyyatlar, məlumat quruluşunun xüsusiyyətləri üzərində işləyərək nəticə yaradır.
 
@@ -561,7 +563,7 @@ fmt.Printf("Name: %s, Age: %d\n", p.getName(), p.getAge())
 
 Bu nümunədə, Person adlı bir struct yaradılır və Name adlı bir string tipində və Age adlı bir int tipində iki xüsusiyyət təyin olunur. setName adlı funksiya, Person tipində pointer (\*Person) parametr qəbul edir və şəxsin adını dəyişir. setAge adlı funksiya, Person tipində pointer (\*Person) parametr qəbul edir və şəxsin yaşını dəyişir. getName adlı funksiya, Person tipində parametr qəbul edir və şəxsin adını qaytarır. getAge adlı funksiya isə şəxsin yaşını qaytarır. p adlı bir Person dəyişəni yaradılır və Name və Age xüsusiyyətlərinə "John Doe" və 42 dəyərləri təyin olunur. Daha sonra, p.setName("Jane Doe") və p.setAge(35) ifadələrindən istifadə edərək şəxsin adı və yaşı dəyişdirilir.
 
-## Interfaces
+### Interfaces
 
 Go dilində interfeys, bir və ya bir neçə metodun müəyyən imza dəstini təyin edən bir məlumat tipidir. Bu imza dəsti, bir məlumat tipinin hansı metodları tətbiq etməli olduğunu göstərir. Bu səbəbdən, interfeyslər, bir məlumat tipinin hansı xüsusiyyətlərə malik olduğunu təyin etmək üçün istifadə olunur.
 
@@ -628,11 +630,11 @@ Rectangle area: 50.000000
 Square area: 25.000000
 ```
 
-# Struct Embedding
+## Struct Embedding
 
 Go dilində struct embedding, bir struct-ın başqa bir struct daxilində yerləşdirilməsi ilə digər struct-ın sahələrinə və metodlarına birbaşa giriş imkanı verir. Bu, təkcə kod təkrarını azaltmır, həm də kompozisiyanı təşviq edir, beləliklə, bir struct-ın başqa bir struct-a miras buraxmadan onun funksionallığını təmin etməyə imkan verir.
 
-```golang
+```go
 package main
 
 import "fmt"
@@ -670,21 +672,21 @@ Employee adlı bir struct təyin edilir və onun içərisində Person struct-ı 
 
 Output:
 
-```
+```go
 Hello, my name is John and I'm 30 years old
 ```
 
 Bu nümunədə, Employee adlı struktur, Person strukturunu daxili olaraq yerləşdirir. Bu, Employee strukturuna Person-un bütün sahələrinə və funksiyalarına birbaşa çıxış imkanı verir. Beləliklə, Employee strukturunu istifadə edərək həm Employee, həm də Person məlumatlarına asanlıqla giriş əldə etmək mümkündür. Bu xüsusiyyət, kod təkrarını azaldır və strukturları daha modul halına gətirir.
 
+\
+\
 
-<br><br>
 
-
-# Errors
+## Errors
 
 Go dilində səhv (error) idarəetməsi, error adlı bir məlumat tipi vasitəsilə həyata keçirilir. Bu tip, bir funksiyanın nəticəsi olaraq ya bir səhv mesajı, ya da nil dəyərini qaytarmaq üçün istifadə olunur. Bu, proqramın gözlənilməyən vəziyyətlərdə necə davranmalı olduğunu idarə etməyə kömək edir.
 
-```golang
+```go
 package main
 
 import (
@@ -721,21 +723,23 @@ Bu nümunədə, divide adlı bir funksiya təyin edilir və iki ədədi bölür.
 main funksiyasında, divide funksiyası iki fərqli parametr ilə çağırılır. err adlı bir səhv dəyişəni istifadə edilərək hər bir çağırışın nəticəsi yoxlanılır. Əgər səhv varsa, səhv mesajı ekrana yazdırılır. Əks halda, nəticə ekrana yazdırılır.
 
 Output:
-```
+
+```go
 5 <nil>
 Cannot divide by zero
 ```
 
 Bu nümunədə divide funksiyası sıfıra bölmə vəziyyətini idarə etmək üçün səhv idarəetməsindən istifadə edir. Əgər y sıfır olarsa, errors.New ilə yaradılmış səhv qaytarılır. Proqram err dəyişəni ilə səhv olub-olmadığını yoxlayır və əgər səhv varsa, onu ekrana yazdırır. Bu yanaşma Go dilində səhv idarəetməsini daha etibarlı və idarə olunan edir.
 
-<br><br>
+\
+\
 
 
-# Goroutines
+## Goroutines
 
 Go dilində goroutine-lər, eyni anda çalışan əməliyyatlardır. Goroutine-lər go açar sözü istifadə edilərək yaradılır və fərqli əməliyyatları eyni vaxtda həyata keçirmək üçün istifadə olunur.
 
-```golang
+```go
 package main
 
 import (
@@ -759,7 +763,8 @@ Bu nümunədə, sayHello adlı bir funksiya təyin edilir və "Hello" mesajını
 main funksiyasında, sayHello funksiyası bir goroutine olaraq çağırılır. Bu səbəbdən, sayHello funksiyasının icrası digər əməliyyatlardan müstəqil olaraq baş verir. time.Sleep funksiyası bir saniyəlik gözləmə müddəti əlavə edir. Nəticədə, "World" mesajı ekrana yazdırılır.
 
 Output:
-```
+
+```go
 Hello
 World
 ```
@@ -767,13 +772,12 @@ World
 Bu nümunədə, goroutine istifadə edərək sayHello funksiyası eyni anda çalışdırıldı. sayHello funksiyası goroutine olaraq çağırıldığı üçün digər əməliyyatlardan müstəqil işləd və nəticədə ekrana "Hello" mesajı yazdırıldıktan sonra "World" mesajı yazdırıldı.
 
 
-<br><br>
 
-# Channel
+## Channel
 
 Go dilində kanal (channel), goroutine-lər arasında məlumat ötürmək üçün istifadə olunan bir məlumat strukturudur. Kanal, make açar sözü ilə yaradılır və <- operatoru ilə məlumat göndərmə və qəbul etmə əməliyyatları həyata keçirilir.
 
-```golang
+```go
 package main
 
 import "fmt"
@@ -795,7 +799,8 @@ go açar sözü ilə bir goroutine yaradılır və bu goroutine messages kanalı
 main funksiyasında, msg adlı bir dəyişkənə messages kanalından bir mesaj alınır və ekrana yazdırılır.
 
 Output:
-```
+
+```go
 Hello
 ```
 
@@ -813,13 +818,15 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 4. Goroutine-lər arasında məlumat yarışlarını qarşısını almaq üçün
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
-<br><br>
+\
+\
 
-# Select
+
+## Select
 
 Go dilində, select açar sözü bir neçə kanalı (channel) dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
 
-```golang
+```go
 package main
 
 import (
@@ -857,18 +864,10 @@ Bu nümunədə, c1 və c2 adlı iki kanal yaradılır və mesaj göndərmə pros
 main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalları dinlənilir. İlk olaraq, goroutin-lər arasındakı gözləmə müddətinə görə, c1 kanalından bir mesaj alınır və ekrana yazdırılır. Daha sonra, c2 kanalından bir mesaj alınır və ekrana yazdırılır.
 
 Output:
-```
+
+```go
 received one
 received two
 ```
 
 Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
-
-
-
-
-
-
-
-
-
