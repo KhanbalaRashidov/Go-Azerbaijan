@@ -4,7 +4,7 @@ Bu repository Go dilini tez öyrənmək istəyənlər üçün hazırlanmışdır
 
 Repository-ni bəyənirsinizsə, ulduz qoyub sosial media hesablarınızda paylaşa bilərsiniz ki, daha çox insana çatsın ⭐️.
 
-### Bu Go nədir?
+#### Bu Go nədir?
 
 Golang (digər adı Go) 2007-ci ildən Google tərəfindən hazırlanmış açıq mənbəli proqramlaşdırma dilidir. O, əsasən alt sistem proqramlaşdırması üçün nəzərdə tutulmuşdur və tərtib edilə bilən və statik olaraq yazılmış dildir. İlk versiya 2009-cu ilin noyabrında buraxıldı. Onun tərtibçisi "gc" (Go Compiler) bir çox əməliyyat sistemi üçün açıq mənbə kimi işlənib hazırlanmışdır.
 
@@ -733,7 +733,39 @@ Bu nümunədə divide funksiyası sıfıra bölmə vəziyyətini idarə etmək �
 
 # Goroutines
 
-g
+Go dilində goroutine-lər, eyni anda çalışan əməliyyatlardır. Goroutine-lər go açar sözü istifadə edilərək yaradılır və fərqli əməliyyatları eyni vaxtda həyata keçirmək üçün istifadə olunur.
+
+```golang
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func sayHello() {
+	fmt.Println("Hello")
+}
+
+func main() {
+	go sayHello() // goroutine
+	time.Sleep(time.Second)
+	fmt.Println("World")
+}
+```
+
+Bu nümunədə, sayHello adlı bir funksiya təyin edilir və "Hello" mesajını ekrana yazdırır.
+
+main funksiyasında, sayHello funksiyası bir goroutine olaraq çağırılır. Bu səbəbdən, sayHello funksiyasının icrası digər əməliyyatlardan müstəqil olaraq baş verir. time.Sleep funksiyası bir saniyəlik gözləmə müddəti əlavə edir. Nəticədə, "World" mesajı ekrana yazdırılır.
+
+Output:
+```
+Hello
+World
+```
+
+Bu nümunədə, goroutine istifadə edərək sayHello funksiyası eyni anda çalışdırıldı. sayHello funksiyası goroutine olaraq çağırıldığı üçün digər əməliyyatlardan müstəqil işləd və nəticədə ekrana "Hello" mesajı yazdırıldıktan sonra "World" mesajı yazdırıldı.
+
 
 <br><br>
 
@@ -782,56 +814,6 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
 <br><br>
-
-# Select
-
-Go dilində, select açar sözü bir neçə kanalı (channel) dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
-
-```golang
-package main
-
-import (
-	"fmt"
-	"time"
-)
-
-func main() {
-	c1 := make(chan string)
-	c2 := make(chan string)
-
-	go func() {
-		time.Sleep(time.Second * 1)
-		c1 <- "one"
-	}()
-
-	go func() {
-		time.Sleep(time.Second * 2)
-		c2 <- "two"
-	}()
-
-	for i := 0; i < 2; i++ {
-		select {
-		case msg1 := <-c1:
-			fmt.Println("received", msg1)
-		case msg2 := <-c2:
-			fmt.Println("received", msg2)
-		}
-	}
-}
-```
-
-Bu nümunədə, c1 və c2 adlı iki kanal yaradılır və mesaj göndərmə prosesi üçün goroutin-lər yaradılır.
-
-main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalları dinlənilir. İlk olaraq, goroutin-lər arasındakı gözləmə müddətinə görə, c1 kanalından bir mesaj alınır və ekrana yazdırılır. Daha sonra, c2 kanalından bir mesaj alınır və ekrana yazdırılır.
-
-Output:
-```
-received one
-received two
-```
-
-Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
-
 
 
 
