@@ -32,3 +32,4 @@
 * [Channel](channel.md)
 * [Select](select.md)
 * [Timeouts](timeouts.md)
+* [Non-Blocking Channel Operations](non-blocking-channel-operations.md)
