@@ -31,3 +31,4 @@
 * [Goroutines](goroutines.md)
 * [Channel](channel.md)
 * [Select](select.md)
+* [Timeouts](timeouts.md)

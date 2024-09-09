@@ -48,7 +48,7 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Goroutines](./#goroutines)
 * [Channel](./#channel)
 * [Select](./#select)
-* [Timeouts](README%20\(1\).md#timeouts)
+* [Timeouts](./#timeouts)
 * [Non-Blocking Channel](README%20\(1\).md#non-blocking-channel)
 * [Closing Channels](README%20\(1\).md#closing-channels)
 * [Range over Channels](README%20\(1\).md#range-over-channels)
@@ -341,8 +341,6 @@ fmt.Println(ages)
 
 Bu nümunədə, ages adlı bir Map təyin edilir və string tipində açarlar və int tipində dəyərlərlə əlaqəli cütlər təyin olunur. Map məlumat strukturunun yaradılması və elementlərin əlavə edilməsi make() funksiyası ilə birləşdirilərək də həyata keçirilə bilər.
 
-
-
 ## Range
 
 range ifadəsi, Go proqramlaşdırma dilində müəyyən bir array, dilim və ya map üzərində dövr yaratmaq üçün istifadə olunur. range ifadəsi, məlumat strukturundakı bütün elementləri tək-tək götürmək üçün istifadə olunur.
@@ -368,8 +366,6 @@ for color, code := range colors {
 ```
 
 Bu nümunədə, colors adlı bir map təyin edilir və red, green və blue açarlarına sahib rəng kodları verilir. range ifadəsi istifadə edilərək, colors xəritəsindəki bütün açar-dəyər cütləri tək-tək götürülür və for dövrü içində istifadə olunur. color dəyişəni açarı, code dəyişəni isə açara uyğun dəyəri təmsil edir. Bu nümunədə, rənglər və onların kodları birgə yazdırılır.
-
-
 
 ## Functions
 
@@ -434,8 +430,6 @@ fmt.Println(concatenate("-", "hello", "world"))
 
 Bu nümunədə, concatenate adlı bir funksiya təyin edilir. Funksiya, sep adlı string tipində bir parametr və strs adlı dəyişən sayda string tipində parametrlər qəbul edir. Funksiyanın daxilində for dövrü istifadə edilərək, strs dilimindəki bütün elementlər birləşdirilir və sep ayracı ilə birgə yazılır. Funksiya concatenate(", ", "foo", "bar", "baz") və concatenate("-", "hello", "world") şəklində çağırılır və nəticələr ekrana yazdırılır.
 
-
-
 ## Closures
 
 Closures, Go proqramlaşdırma dilində, bir funksiyanın başqa bir funksiyanın daxilində yaradılması ilə əmələ gələn bir strukturdur. Bu struktur, bir funksiyanın daxilində olan başqa bir funksiyaya istinad edərək, funksiyanın işlədiyi mühitin xaricindəki dəyişənlərə giriş imkanı verir.
@@ -471,8 +465,6 @@ fmt.Println(addFive(3))
 
 Bu nümunədə, adder adlı bir funksiya təyin edilir. Funksiya, a adlı bir int tipində parametr qəbul edir və bir daxili funksiya qaytarır. Daxili funksiya, b adlı bir int tipində parametr qəbul edir və a ilə b parametrlərinin cəmini geri qaytarır. addFive adlı bir dəyişənə adder(5) funksiyası təyin edilir və bu dəyişən ilə daxili funksiya işlədilir. addFive(2) və addFive(3) çağırıldıqca nəticələr ekrana yazdırılır.
 
-
-
 ## Recursion
 
 Recursion, Go proqramlaşdırma dilində, bir funksiyanın özünü çağırmasıdır. Bu struktur, müəyyən bir şərt yerinə yetirilənə qədər funksiyanın təkrarlanaraq işləməsini təmin edir.
@@ -502,8 +494,6 @@ fmt.Println(fibonacci(10))
 ```
 
 Bu nümunədə, fibonacci adlı bir funksiya təyin edilir. Funksiya, n adlı bir int tipində parametr qəbul edir və Fibonacci sayını hesablayır. Funksiya daxilində, if şərti istifadə edilərək n dəyərinin 2-dən kiçik olub-olmadığı yoxlanılır. Əgər n 2-dən kiçikdirsə, n dəyəri geri qaytarılır. Əks halda, funksiya özünü yenidən çağıraraq Fibonacci sayını hesablayır. fibonacci(10) çağırıldıqda nəticələr ekrana yazdırılır.
-
-
 
 ## Pointers
 
@@ -779,8 +769,6 @@ Hello, my name is John and I'm 30 years old
 
 Bu nümunədə, Employee adlı struktur, Person strukturunu daxili olaraq yerləşdirir. Bu, Employee strukturuna Person-un bütün sahələrinə və funksiyalarına birbaşa çıxış imkanı verir. Beləliklə, Employee strukturunu istifadə edərək həm Employee, həm də Person məlumatlarına asanlıqla giriş əldə etmək mümkündür. Bu xüsusiyyət, kod təkrarını azaldır və strukturları daha modul halına gətirir.
 
-
-
 ## Errors
 
 Go dilində səhv (error) idarəetməsi, error adlı bir məlumat tipi vasitəsilə həyata keçirilir. Bu tip, bir funksiyanın nəticəsi olaraq ya bir səhv mesajı, ya da nil dəyərini qaytarmaq üçün istifadə olunur. Bu, proqramın gözlənilməyən vəziyyətlərdə necə davranmalı olduğunu idarə etməyə kömək edir.
@@ -830,8 +818,6 @@ Cannot divide by zero
 
 Bu nümunədə divide funksiyası sıfıra bölmə vəziyyətini idarə etmək üçün səhv idarəetməsindən istifadə edir. Əgər y sıfır olarsa, errors.New ilə yaradılmış səhv qaytarılır. Proqram err dəyişəni ilə səhv olub-olmadığını yoxlayır və əgər səhv varsa, onu ekrana yazdırır. Bu yanaşma Go dilində səhv idarəetməsini daha etibarlı və idarə olunan edir.
 
-
-
 ## Goroutines
 
 Go dilində goroutine-lər, eyni anda çalışan əməliyyatlardır. Goroutine-lər go açar sözü istifadə edilərək yaradılır və fərqli əməliyyatları eyni vaxtda həyata keçirmək üçün istifadə olunur.
@@ -867,8 +853,6 @@ World
 ```
 
 Bu nümunədə, goroutine istifadə edərək sayHello funksiyası eyni anda çalışdırıldı. sayHello funksiyası goroutine olaraq çağırıldığı üçün digər əməliyyatlardan müstəqil işləd və nəticədə ekrana "Hello" mesajı yazdırıldıktan sonra "World" mesajı yazdırıldı.
-
-
 
 ## Channel
 
@@ -915,8 +899,7 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 4. Goroutine-lər arasında məlumat yarışlarını qarşısını almaq üçün
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
-\
-
+\\
 
 ## Select
 
@@ -967,3 +950,61 @@ received two
 ```
 
 Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
+
+## Timeouts
+
+Go dilində, **timeout** əməliyyatları xüsusilə şəbəkə əməliyyatları zamanı əhəmiyyətlidir. `time` paketi istifadə edilərək, müəyyən bir müddət gözləmək təmin edilə bilər. Əgər bu müddət keçərsə, timeout səhvi yaranır.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	c1 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c1 <- "result 1"
+	}()
+
+	select {
+	case res := <-c1:
+		fmt.Println(res)
+	case <-time.After(time.Second * 1):
+		fmt.Println("timeout 1")
+	}
+
+	c2 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c2 <- "result 2"
+	}()
+
+	select {
+	case res := <-c2:
+		fmt.Println(res)
+	case <-time.After(time.Second * 3):
+		fmt.Println("timeout 2")
+	}
+}
+```
+
+Bu nümunədə, `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə əməliyyatları üçün goroutin-lər yaradılır.
+
+İlk olaraq, `select` açar sözü istifadə edilərək, `c1` kanalından mesaj gözlənilir. Amma `time.After` istifadə edilərək, `c1` kanalından bir mesaj alınmazdan əvvəl 1 saniyə gözlənilir. Əgər 1 saniyədən çox müddət keçərsə, timeout səhvi yaranır və "timeout 1" mesajı ekrana yazdırılır.
+
+Daha sonra, `select` açar sözü ilə `c2` kanalından mesaj gözlənilir. Bu dəfə `time.After` ilə 3 saniyə gözlənilir və nəticə mesajı alınır.
+
+#### Çıxış:
+
+```go
+timeout 1
+result 2
+```
+
+Bu nümunədə `time.After` istifadə edərək timeout əməliyyatları icra edilir. İlk nümunədə, `c1` kanalına 1 saniyədən əvvəl mesaj göndərilmədiyi üçün timeout səhvi yaranır. İkinci nümunədə isə, `c2` kanalına mesaj vaxtında göndərildiyi üçün mesaj qəbul edilir və ekrana yazdırılır.
