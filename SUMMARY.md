@@ -35,3 +35,4 @@
 * [Non-Blocking Channel Operations](non-blocking-channel-operations.md)
 * [Closing Channels](closing-channels.md)
 * [Range over Channels](range-over-channels.md)
+* [Timers](timers.md)
