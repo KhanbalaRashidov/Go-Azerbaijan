@@ -1,7 +1,5 @@
 # Range over Channels
 
-## Range over Channels
-
 Go dilində, `range` açar sözü channel-lar üzərində dövr etməyə imkan verir. Bu üsul ilə channel bağlanana qədər bütün mesajlar `for` dövrü ilə oxuna bilər.
 
 ```go
