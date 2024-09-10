@@ -36,3 +36,4 @@
 * [Closing Channels](closing-channels.md)
 * [Range over Channels](range-over-channels.md)
 * [Timers](timers.md)
+* [Ticker](ticker.md)
