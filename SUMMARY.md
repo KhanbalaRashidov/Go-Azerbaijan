@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Bu Go nədir?](README.md)
+* [Info](README.md)
 * [Values](values.md)
 * [Variables](variables/README.md)
 * [Constants](constants/README.md)
