@@ -37,3 +37,4 @@
 * [Range over Channels](range-over-channels.md)
 * [Timers](timers.md)
 * [Ticker](ticker.md)
+* [Worker pools](worker-pools.md)
