@@ -36,6 +36,6 @@
 * [Closing Channels](closing-channels/README.md)
 * [Range over Channels](range-over-channels/README.md)
 * [Timers](timers/README.md)
-* [Ticker](ticker.md)
+* [Ticker](ticker/README.md)
 * [Worker pools](worker-pools.md)
 * [WaitGroups](waitgroups.md)
