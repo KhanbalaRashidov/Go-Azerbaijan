@@ -901,7 +901,7 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 
 ## Select
 
-Go dilində, select açar sözü bir neçə kanalı (channel) dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
+Go dilində, select açar sözü bir neçə kanalı `(channel)` dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
 
 ```go
 package main
@@ -936,9 +936,9 @@ func main() {
 }
 ```
 
-Bu nümunədə, c1 və c2 adlı iki kanal yaradılır və mesaj göndərmə prosesi üçün goroutin-lər yaradılır.
+Bu nümunədə, `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə prosesi üçün goroutin-lər yaradılır.
 
-main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalları dinlənilir. İlk olaraq, goroutin-lər arasındakı gözləmə müddətinə görə, c1 kanalından bir mesaj alınır və ekrana yazdırılır. Daha sonra, c2 kanalından bir mesaj alınır və ekrana yazdırılır.
+main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalları dinlənilir. İlk olaraq, goroutin-lər arasındakı gözləmə müddətinə görə, `c1` kanalından bir mesaj alınır və ekrana yazdırılır. Daha sonra, `c2` kanalından bir mesaj alınır və ekrana yazdırılır.
 
 Output:
 
@@ -947,66 +947,439 @@ received one
 received two
 ```
 
-Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
+Bu nümunədə, select açar sözü istifadə edilərək, `c1`  və `c2` kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
 
 
 
-Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
+Bu nümunədə, select açar sözü istifadə edilərək, `c1` və `c2` kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
+
+Tabii! Golang ile concurrency (eşzamanlılık) kavramlarını açıklayan bu örneklerin başlıkları aynı kalacak şekilde, açıklamaları Azerbaycanca olarak düzenleyeceğim:
+
+***
 
 ## Timeouts
 
-Go dilində, **timeout** əməliyyatları xüsusilə şəbəkə əməliyyatları zamanı əhəmiyyətlidir. `time` paketi istifadə edilərək, müəyyən bir müddət gözləmək təmin edilə bilər. Əgər bu müddət keçərsə, timeout səhvi yaranır.
+Go dilində, timeout əməliyyatları, xüsusilə şəbəkə əməliyyatları zamanı vacibdir. `time` paketindən istifadə edərək, müəyyən bir müddət gözləmək mümkündür. Əgər müddət aşılırsa, timeout xətası baş verir.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	c1 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c1 <- "result 1"
+	}()
+
+	select {
+	case res := <-c1:
+		fmt.Println(res)
+	case <-time.After(time.Second * 1):
+		fmt.Println("timeout 1")
+	}
+
+	c2 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c2 <- "result 2"
+	}()
+
+	select {
+	case res := <-c2:
+		fmt.Println(res)
+	case <-time.After(time.Second * 3):
+		fmt.Println("timeout 2")
+	}
+}
+```
+
+Bu nümunədə `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə əməliyyatları üçün goroutine-lər istifadə olunur. İlk olaraq, `select` açar sözü istifadə edərək, `c1` kanalından bir mesaj gözlənilir. Amma `time.After` ilə bir saniyə vaxt limiti təyin edilir. Əgər bu vaxt aşılırsa, "timeout 1" mesajı çap olunur.
+
+Sonra, eyni əməliyyat `c2` kanalı üçün edilir və bu dəfə 3 saniyə gözlənilir.
+
+**Output**:
+
+```
+timeout 1
+result 2
+```
+
+***
+
+## Non-Blocking Channel Operations
+
+Go dilində, kanallar adətən bloklama xüsusiyyətinə malikdir. Yəni, bir goroutine bir kanala mesaj göndərmək və ya mesaj almaq istəyirsə, həmin əməliyyat tamamlanana qədər dayanar. Lakin, `select` açar sözü istifadə edilərək, non-blocking əməliyyatlar da həyata keçirmək mümkündür.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	messages := make(chan string)
+	signals := make(chan bool)
+
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	default:
+		fmt.Println("no message received")
+	}
+
+	msg := "hello"
+	select {
+	case messages <- msg:
+		fmt.Println("sent message", msg)
+	default:
+		fmt.Println("no message sent")
+	}
+
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	default:
+		fmt.Println("no message received")
+	}
+
+	select {
+	case sig := <-signals:
+		fmt.Println("received signal", sig)
+	default:
+		fmt.Println("no signal received")
+	}
+
+	signal := true
+	select {
+	case signals <- signal:
+		fmt.Println("sent signal", signal)
+	default:
+		fmt.Println("no signal sent")
+	}
+
+	select {
+	case sig := <-signals:
+		fmt.Println("received signal", sig)
+	default:
+		fmt.Println("no signal received")
+	}
+}
+```
+
+Bu nümunədə, `messages` adlı bir kanal yaradılır və göndərilməmiş mesajın yoxlanılması üçün `select` istifadə edilir. Ardından, bir mesaj yaradılır və kanala göndərilməyə çalışılır. Əgər kanal boşdursa, "no message sent" çap olunur.
+
+**Output**:
+
+```go
+no message received
+sent message hello
+no message received
+no signal received
+sent signal true
+received signal true
+```
+
+***
+
+## Closing Channels
+
+Go dilində, kanalların bağlanması, mesajların göndərilməsi və alınması arasında sinxronizasiya yaradır. `close` funksiyası ilə bir kanal bağlana bilər. Bağlanan kanala daha artıq mesaj göndərilə bilməz və bu kanaldan mesajlar alınmaz.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	jobs := make(chan int, 5)
+	done := make(chan bool)
+
+	go func() {
+		for {
+			j, more := <-jobs
+			if more {
+				fmt.Println("received job", j)
+			} else {
+				fmt.Println("received all jobs")
+				done <- true
+				return
+			}
+		}
+	}()
+
+	for j := 1; j <= 3; j++ {
+		jobs <- j
+		fmt.Println("sent job", j)
+	}
+
+	close(jobs)
+	fmt.Println("sent all jobs")
+
+	<-done
+}
+```
+
+Bu nümunədə `jobs` adlı bir kanal yaradılır və goroutine bu kanaldan mesajlar qəbul edir. `close` funksiyası ilə kanal bağlanır və bütün işlərin tamamlandığı siqnalı `done` kanalına göndərilir.
+
+**Output**:
+
+```go
+sent job 1
+sent job 2
+sent job 3
+sent all jobs
+received job 1
+received job 2
+received job 3
+received all jobs
+```
+
+
+
+***
+
+## Range over Channels
+
+Go-da `range` açar sözü istifadə edərək kanaldan mesajlar almaq mümkündür. Bu zaman kanal açıq qaldığı müddətdə mesajlar qəbul edilir. Kanal bağlandıqda isə `range` döngüsü dayanır.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	queue := make(chan string, 2)
+	queue <- "one"
+	queue <- "two"
+	close(queue)
+
+	for elem := range queue {
+		fmt.Println(elem)
+	}
+}
+```
+
+Bu nümunədə, `queue` adlı bir kanal yaradılır və iki mesaj kanala yerləşdirilir. Kanal bağlandıqdan sonra, `range` döngüsü ilə kanalın bütün elementləri çap edilir.
+
+**Output**:
+
+```
+one
+two
+```
+
+***
+
+## Timers
+
+Go dilində `time` paketindən istifadə edərək timerlər yaratmaq mümkündür. Timerlər müəyyən bir müddətdən sonra bir siqnal göndərir. `time.NewTimer` funksiyası müəyyən edilmiş vaxtdan sonra bir siqnal göndərən bir timer yaradır.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	timer1 := time.NewTimer(time.Second * 2)
+
+	<-timer1.C
+	fmt.Println("Timer 1 fired")
+
+	timer2 := time.NewTimer(time.Second)
+	go func() {
+		<-timer2.C
+		fmt.Println("Timer 2 fired")
+	}()
+
+	stop2 := timer2.Stop()
+	if stop2 {
+		fmt.Println("Timer 2 stopped")
+	}
+
+	time.Sleep(time.Second * 2)
+}
+```
+
+Bu nümunədə, iki timer yaradılır. Birincisi 2 saniyə sonra işə düşür və "Timer 1 fired" çap edir. İkincisi isə 1 saniyə sonra işə düşmədən dayandırılır, buna görə də "Timer 2 stopped" çap olunur.
+
+**Output**:
+
+```go
+Timer 1 fired
+Timer 2 stopped
+```
+
+***
+
+## Tickers
+
+Go-da `Ticker` periodik olaraq müəyyən bir intervalla siqnal göndərən bir mexanizmdir. `time.NewTicker` funksiyası ilə ticker yaradılır və hər dəfə təyin edilmiş intervalla siqnallar alır.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	ticker := time.NewTicker(time.Millisecond * 500)
+	done := make(chan bool)
+
+	go func() {
+		for {
+			select {
+			case <-done:
+				return
+			case t := <-ticker.C:
+				fmt.Println("Tick at", t)
+			}
+		}
+	}()
+
+	time.Sleep(time.Millisecond * 1600)
+	ticker.Stop()
+	done <- true
+	fmt.Println("Ticker stopped")
+}
+```
+
+Bu nümunədə `ticker` hər 500 millisekundda bir "tick" siqnalı göndərir və bu siqnallar çap edilir. `time.Sleep` ilə müəyyən müddətdən sonra ticker dayandırılır və proqram sonlanır.
+
+**Output**:
+
+```go
+Tick at 2023-09-10 12:34:56.123456789 +0000 UTC m=+0.500123456
+Tick at 2023-09-10 12:34:56.623456789 +0000 UTC m=+1.000123456
+Tick at 2023-09-10 12:34:57.123456789 +0000 UTC m=+1.500123456
+Ticker stopped
+```
+
+***
+
+## Worker Pools
+
+Worker pool-ları Go-da paralel hesablama üçün istifadə olunur. Bir neçə goroutine bir-birindən müstəqil işləri eyni zamanda yerinə yetirə bilər. Bu şəkildə bir neçə işçinin bir pool-da işləməsi təşkil edilə bilər.
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func worker(id int, jobs <-chan int, results chan<- int) {
+	for j := range jobs {
+		fmt.Println("worker", id, "started  job", j)
+		time.Sleep(time.Second)
+		fmt.Println("worker", id, "finished job", j)
+		results <- j * 2
+	}
+}
+
+func main() {
+	const numJobs = 5
+	jobs := make(chan int, numJobs)
+	results := make(chan int, numJobs)
+
+	for w := 1; w <= 3; w++ {
+		go worker(w, jobs, results)
+	}
+
+	for j := 1; j <= numJobs; j++ {
+		jobs <- j
+	}
+	close(jobs)
+
+	for a := 1; a <= numJobs; a++ {
+		<-results
+	}
+}
+```
+
+Bu nümunədə 3 işçi yaradılır və 5 iş onları icra etməsi üçün göndərilir. Hər işçinin hansı işi icra etməyə başladığı və tamamladığı çap olunur.
+
+**Output**:
+
+```
+worker 1 started  job 1
+worker 2 started  job 2
+worker 3 started  job 3
+worker 1 finished job 1
+worker 1 started  job 4
+worker 2 finished job 2
+worker 2 started  job 5
+worker 3 finished job 3
+worker 1 finished job 4
+worker 2 finished job 5
+```
+
+
+
+## WaitGroups
+
+WaitGroup quruluşu Go dilində goroutinlər arasında sinxronizasiya təmin etmək üçün istifadə edilən bir mexanizmdir. WaitGroup quruluşu Go-nun `sync` paketində yerləşir.
+
+WaitGroup proqramçılara işləyəcək funksiyaların sayını əvvəlcədən müəyyən etməyə və həmin funksiyaların tamamlanmasını gözləməyə imkan verir. Hər goroutine işləmə bitdikdə, WaitGroup quruluşundakı `Done()` funksiyasını çağırır. WaitGroup-dakı `Wait()` funksiyası isə bütün funksiyaların tamamlanmasını gözləyir.
+
+Aşağıdakı nümunə, WaitGroup quruluşunun istifadəsini göstərir:
 
 ```go
 package main
 
 import (
     "fmt"
+    "sync"
     "time"
 )
 
+func worker(id int, wg *sync.WaitGroup) {
+    defer wg.Done()
+
+    fmt.Printf("Worker %d starting\n", id)
+    time.Sleep(time.Second)
+    fmt.Printf("Worker %d done\n", id)
+}
+
 func main() {
-    c1 := make(chan string, 1)
+    var wg sync.WaitGroup
 
-    go func() {
-       time.Sleep(time.Second * 2)
-       c1 <- "result 1"
-    }()
-
-    select {
-    case res := <-c1:
-       fmt.Println(res)
-    case <-time.After(time.Second * 1):
-       fmt.Println("timeout 1")
+    for i := 1; i <= 5; i++ {
+        wg.Add(1)
+        go worker(i, &wg)
     }
 
-    c2 := make(chan string, 1)
+    wg.Wait()
 
-    go func() {
-       time.Sleep(time.Second * 2)
-       c2 <- "result 2"
-    }()
-
-    select {
-    case res := <-c2:
-       fmt.Println(res)
-    case <-time.After(time.Second * 3):
-       fmt.Println("timeout 2")
-    }
+    fmt.Println("All workers done")
 }
 ```
 
-Bu nümunədə, `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə əməliyyatları üçün goroutin-lər yaradılır.
+Bu nümunədə, 5 işçi funksiyası `worker()` funksiyası çağırılır. WaitGroup quruluşu, hər işçi funksiyası başlamazdan əvvəl `Add()` funksiyası ilə gözlənilən işlərin sayını artırır. Hər işçi funksiyası tamamlandıqda, `Done()` funksiyası ilə bir işin başa çatdığı bildirilir. `Wait()` funksiyası isə bütün işlərin bitməsini gözləmək üçün istifadə olunur. Nəticədə, bütün işçi funksiyaları bitdikdən sonra `main()` funksiyası "All workers done" mesajını çap edir.
 
-İlk olaraq, `select` açar sözü istifadə edilərək, `c1` kanalından mesaj gözlənilir. Amma `time.After` istifadə edilərək, `c1` kanalından bir mesaj alınmazdan əvvəl 1 saniyə gözlənilir. Əgər 1 saniyədən çox müddət keçərsə, timeout səhvi yaranır və "timeout 1" mesajı ekrana yazdırılır.
-
-Daha sonra, `select` açar sözü ilə `c2` kanalından mesaj gözlənilir. Bu dəfə `time.After` ilə 3 saniyə gözlənilir və nəticə mesajı alınır.
-
-**Output:**
+**Ouput**:
 
 ```go
-timeout 1
-result 2
+Worker 5 starting
+Worker 3 starting
+Worker 4 starting
+Worker 1 starting
+Worker 2 starting
+Worker 5 done
+Worker 3 done
+Worker 2 done
+Worker 1 done
+Worker 4 done
+All workers done
 ```
-
-Bu nümunədə `time.After` istifadə edərək timeout əməliyyatları icra edilir. İlk nümunədə, `c1` kanalına 1 saniyədən əvvəl mesaj göndərilmədiyi üçün timeout səhvi yaranır. İkinci nümunədə isə, `c2` kanalına mesaj vaxtında göndərildiyi üçün mesaj qəbul edilir və ekrana yazdırılır.
