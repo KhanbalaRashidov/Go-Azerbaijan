@@ -34,7 +34,7 @@
 * [Timeouts](timeouts/README.md)
 * [Non-Blocking Channel Operations](non-blocking-channel-operations/README.md)
 * [Closing Channels](closing-channels/README.md)
-* [Range over Channels](range-over-channels.md)
+* [Range over Channels](range-over-channels/README.md)
 * [Timers](timers.md)
 * [Ticker](ticker.md)
 * [Worker pools](worker-pools.md)
