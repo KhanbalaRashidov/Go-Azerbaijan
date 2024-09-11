@@ -957,7 +957,7 @@ Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanalların�
 
 Go dilində, **timeout** əməliyyatları xüsusilə şəbəkə əməliyyatları zamanı əhəmiyyətlidir. `time` paketi istifadə edilərək, müəyyən bir müddət gözləmək təmin edilə bilər. Əgər bu müddət keçərsə, timeout səhvi yaranır.
 
-```go
+```csharp
 package main
 
 import (
