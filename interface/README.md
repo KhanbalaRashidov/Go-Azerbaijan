@@ -1,10 +1,10 @@
-# Interfaces
+# Interface
 
 Go dilində interfeys, bir və ya bir neçə metodun müəyyən imza dəstini təyin edən bir məlumat tipidir. Bu imza dəsti, bir məlumat tipinin hansı metodları tətbiq etməli olduğunu göstərir. Bu səbəbdən, interfeyslər, bir məlumat tipinin hansı xüsusiyyətlərə malik olduğunu təyin etmək üçün istifadə olunur.
 
 Məsələn, bir fiqurun sahəsini hesablamaq üçün area adlı bir funksiya təyin etdiyinizi düşünün. Kvadrat, dairə və düzbucaqlı kimi müxtəlif fiqurlar area funksiyasını fərqli şəkildə tətbiq edirlər. Bu halda, hər bir fiqurun sahəsini hesablamaq üçün ayrı-ayrı funksiyalar təyin etmək əvəzinə, interfeys istifadə edərək hamısını eyni tipdə bir məlumatda toplaya bilərsiniz.
 
-```golang
+```go
 package main
 
 import (
@@ -59,11 +59,8 @@ Bu nümunədə, Shape adlı bir interfeys təyin olunur və area adlı bir funks
 
 Output:
 
-```
+```go
 Circle area: 78.539816
 Rectangle area: 50.000000
 Square area: 25.000000
-``` 
-
-
-
+```

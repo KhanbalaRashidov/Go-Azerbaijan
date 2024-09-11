@@ -1,8 +1,8 @@
-# Struct Embedding
+# Struct embedding
 
 Go dilində struct embedding, bir struct-ın başqa bir struct daxilində yerləşdirilməsi ilə digər struct-ın sahələrinə və metodlarına birbaşa giriş imkanı verir. Bu, təkcə kod təkrarını azaltmır, həm də kompozisiyanı təşviq edir, beləliklə, bir struct-ın başqa bir struct-a miras buraxmadan onun funksionallığını təmin etməyə imkan verir.
 
-```golang
+```go
 package main
 
 import "fmt"
@@ -40,7 +40,7 @@ Employee adlı bir struct təyin edilir və onun içərisində Person struct-ı 
 
 Output:
 
-```
+```go
 Hello, my name is John and I'm 30 years old
 ```
 

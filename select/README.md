@@ -2,7 +2,7 @@
 
 Go dilində, select açar sözü bir neçə kanalı (channel) dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
 
-```golang
+```go
 package main
 
 import (
@@ -40,14 +40,10 @@ Bu nümunədə, c1 və c2 adlı iki kanal yaradılır və mesaj göndərmə pros
 main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalları dinlənilir. İlk olaraq, goroutin-lər arasındakı gözləmə müddətinə görə, c1 kanalından bir mesaj alınır və ekrana yazdırılır. Daha sonra, c2 kanalından bir mesaj alınır və ekrana yazdırılır.
 
 Output:
-```
+
+```go
 received one
 received two
 ```
 
 Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
-
-
-
-
-

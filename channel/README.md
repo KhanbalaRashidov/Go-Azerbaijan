@@ -2,7 +2,7 @@
 
 Go dilində kanal (channel), goroutine-lər arasında məlumat ötürmək üçün istifadə olunan bir məlumat strukturudur. Kanal, make açar sözü ilə yaradılır və <- operatoru ilə məlumat göndərmə və qəbul etmə əməliyyatları həyata keçirilir.
 
-```golang
+```go
 package main
 
 import "fmt"
@@ -24,7 +24,8 @@ go açar sözü ilə bir goroutine yaradılır və bu goroutine messages kanalı
 main funksiyasında, msg adlı bir dəyişkənə messages kanalından bir mesaj alınır və ekrana yazdırılır.
 
 Output:
-```
+
+```go
 Hello
 ```
 
@@ -42,8 +43,5 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 4. Goroutine-lər arasında məlumat yarışlarını qarşısını almaq üçün
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
-<br><br>
-
-
-
-
+\
+\

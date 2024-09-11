@@ -2,7 +2,7 @@
 
 Go dilində səhv (error) idarəetməsi, error adlı bir məlumat tipi vasitəsilə həyata keçirilir. Bu tip, bir funksiyanın nəticəsi olaraq ya bir səhv mesajı, ya da nil dəyərini qaytarmaq üçün istifadə olunur. Bu, proqramın gözlənilməyən vəziyyətlərdə necə davranmalı olduğunu idarə etməyə kömək edir.
 
-```golang
+```go
 package main
 
 import (
@@ -39,15 +39,13 @@ Bu nümunədə, divide adlı bir funksiya təyin edilir və iki ədədi bölür.
 main funksiyasında, divide funksiyası iki fərqli parametr ilə çağırılır. err adlı bir səhv dəyişəni istifadə edilərək hər bir çağırışın nəticəsi yoxlanılır. Əgər səhv varsa, səhv mesajı ekrana yazdırılır. Əks halda, nəticə ekrana yazdırılır.
 
 Output:
-```
+
+```go
 5 <nil>
 Cannot divide by zero
 ```
 
 Bu nümunədə divide funksiyası sıfıra bölmə vəziyyətini idarə etmək üçün səhv idarəetməsindən istifadə edir. Əgər y sıfır olarsa, errors.New ilə yaradılmış səhv qaytarılır. Proqram err dəyişəni ilə səhv olub-olmadığını yoxlayır və əgər səhv varsa, onu ekrana yazdırır. Bu yanaşma Go dilində səhv idarəetməsini daha etibarlı və idarə olunan edir.
 
-<br><br>
-
-
-
-
+\
+\

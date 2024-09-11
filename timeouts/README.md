@@ -47,7 +47,7 @@ Bu nümunədə, `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə 
 
 Daha sonra, `select` açar sözü ilə `c2` kanalından mesaj gözlənilir. Bu dəfə `time.After` ilə 3 saniyə gözlənilir və nəticə mesajı alınır.
 
-#### Çıxış:
+#### Output:
 
 ```go
 timeout 1
