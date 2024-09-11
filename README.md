@@ -942,7 +942,7 @@ main funksiyasında, select açar sözü istifadə edilərək, c1 və c2 kanalla
 
 Output:
 
-```go
+```golang
 received one
 received two
 ```
@@ -961,7 +961,7 @@ Tabii! Golang ile concurrency (eşzamanlılık) kavramlarını açıklayan bu ö
 
 Go dilində, timeout əməliyyatları, xüsusilə şəbəkə əməliyyatları zamanı vacibdir. `time` paketindən istifadə edərək, müəyyən bir müddət gözləmək mümkündür. Əgər müddət aşılırsa, timeout xətası baş verir.
 
-```go
+```golang
 package main
 
 import (
@@ -1006,7 +1006,7 @@ Sonra, eyni əməliyyat `c2` kanalı üçün edilir və bu dəfə 3 saniyə göz
 
 **Output**:
 
-```
+```go
 timeout 1
 result 2
 ```
@@ -1312,7 +1312,7 @@ Bu nümunədə 3 işçi yaradılır və 5 iş onları icra etməsi üçün gönd
 
 **Output**:
 
-```
+```go
 worker 1 started  job 1
 worker 2 started  job 2
 worker 3 started  job 3
