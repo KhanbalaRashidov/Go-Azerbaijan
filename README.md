@@ -53,7 +53,7 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Timers](./#timers)
 * [Tickers](./#ticker)
 * [Worker Pools](./#worker-pools)
-* [Wait Groups](README%20\(1\).md#wait-groups)
+* [Wait Groups](./#waitgroups)
 * [Rate Limiting](README%20\(1\).md#rate-limiting)
 * [Atomic Counters](README%20\(1\).md#atomic-counters)
 * [Sorting](README%20\(1\).md#sorting)
