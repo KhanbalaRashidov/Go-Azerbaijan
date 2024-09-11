@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Info](README.md)
-* [Values](values.md)
+* [Values](values/README.md)
 * [Variables](variables/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
@@ -22,12 +22,12 @@
 ***
 
 * [Pointers](pointers/README.md)
-* [Strings and Runes](strings\_and\_runs/README.md)
+* [Strings and Runes](strings_and_runs/README.md)
 * [Structs](structs/README.md)
-* [Method](method.md)
-* [Interface](interface.md)
-* [Struct embedding](struct-embedding.md)
-* [Errors](errors.md)
+* [Method](method/README.md)
+* [Interface](interface/README.md)
+* [Struct embedding](struct-embedding/README.md)
+* [Errors](errors/README.md)
 * [Goroutines](goroutines/README.md)
 * [Channel](channel/README.md)
 * [Select](select/README.md)
@@ -37,5 +37,5 @@
 * [Range over Channels](range-over-channels/README.md)
 * [Timers](timers/README.md)
 * [Ticker](ticker/README.md)
-* [Worker pools](worker-pools.md)
-* [WaitGroups](waitgroups.md)
+* [Worker pools](worker-pools/README.md)
+* [WaitGroups](waitgroups/README.md)
