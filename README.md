@@ -957,42 +957,42 @@ Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanalların�
 
 Go dilində, **timeout** əməliyyatları xüsusilə şəbəkə əməliyyatları zamanı əhəmiyyətlidir. `time` paketi istifadə edilərək, müəyyən bir müddət gözləmək təmin edilə bilər. Əgər bu müddət keçərsə, timeout səhvi yaranır.
 
-```csharp
+```go
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func main() {
-	c1 := make(chan string, 1)
+    c1 := make(chan string, 1)
 
-	go func() {
-		time.Sleep(time.Second * 2)
-		c1 <- "result 1"
-	}()
+    go func() {
+       time.Sleep(time.Second * 2)
+       c1 <- "result 1"
+    }()
 
-	select {
-	case res := <-c1:
-		fmt.Println(res)
-	case <-time.After(time.Second * 1):
-		fmt.Println("timeout 1")
-	}
+    select {
+    case res := <-c1:
+       fmt.Println(res)
+    case <-time.After(time.Second * 1):
+       fmt.Println("timeout 1")
+    }
 
-	c2 := make(chan string, 1)
+    c2 := make(chan string, 1)
 
-	go func() {
-		time.Sleep(time.Second * 2)
-		c2 <- "result 2"
-	}()
+    go func() {
+       time.Sleep(time.Second * 2)
+       c2 <- "result 2"
+    }()
 
-	select {
-	case res := <-c2:
-		fmt.Println(res)
-	case <-time.After(time.Second * 3):
-		fmt.Println("timeout 2")
-	}
+    select {
+    case res := <-c2:
+       fmt.Println(res)
+    case <-time.After(time.Second * 3):
+       fmt.Println("timeout 2")
+    }
 }
 ```
 
