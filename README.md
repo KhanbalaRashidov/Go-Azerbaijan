@@ -897,7 +897,6 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 4. Goroutine-lər arasında məlumat yarışlarını qarşısını almaq üçün
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
-\\
 
 ## Select
 
@@ -955,7 +954,6 @@ Bu nümunədə, select açar sözü istifadə edilərək, `c1` və `c2` kanallar
 
 Tabii! Golang ile concurrency (eşzamanlılık) kavramlarını açıklayan bu örneklerin başlıkları aynı kalacak şekilde, açıklamaları Azerbaycanca olarak düzenleyeceğim:
 
-***
 
 ## Timeouts
 
