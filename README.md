@@ -955,6 +955,46 @@ Bu nümunədə, select açar sözü istifadə edilərək, `c1` və `c2` kanallar
 Tabii! Golang ile concurrency (eşzamanlılık) kavramlarını açıklayan bu örneklerin başlıkları aynı kalacak şekilde, açıklamaları Azerbaycanca olarak düzenleyeceğim:
 
 
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	c1 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c1 <- "result 1"
+	}()
+
+	select {
+	case res := <-c1:
+		fmt.Println(res)
+	case <-time.After(time.Second * 1):
+		fmt.Println("timeout 1")
+	}
+
+	c2 := make(chan string, 1)
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		c2 <- "result 2"
+	}()
+
+	select {
+	case res := <-c2:
+		fmt.Println(res)
+	case <-time.After(time.Second * 3):
+		fmt.Println("timeout 2")
+	}
+}
+```
+
+
 ## Timeouts
 
 Go dilində, timeout əməliyyatları, xüsusilə şəbəkə əməliyyatları zamanı vacibdir. `time` paketindən istifadə edərək, müəyyən bir müddət gözləmək mümkündür. Əgər müddət aşılırsa, timeout xətası baş verir.
