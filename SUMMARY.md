@@ -38,3 +38,4 @@
 * [Timers](timers.md)
 * [Ticker](ticker.md)
 * [Worker pools](worker-pools.md)
+* [WaitGroups](waitgroups.md)
