@@ -951,39 +951,6 @@ Bu nümunədə, select açar sözü istifadə edilərək, `c1`  və `c2` kanalla
 
 ## Timeouts
 
-```go
-package main
-
-import (
-	"fmt"
-	"time"
-)
-
-func main() {
-	c1 := make(chan string)
-	c2 := make(chan string)
-
-	go func() {
-		time.Sleep(time.Second * 1)
-		c1 <- "one"
-	}()
-
-	go func() {
-		time.Sleep(time.Second * 2)
-		c2 <- "two"
-	}()
-
-	for i := 0; i < 2; i++ {
-		select {
-		case msg1 := <-c1:
-			fmt.Println("received", msg1)
-		case msg2 := <-c2:
-			fmt.Println("received", msg2)
-		}
-	}
-}
-```
-
 Go dilində, timeout əməliyyatları, xüsusilə şəbəkə əməliyyatları zamanı vacibdir. `time` paketindən istifadə edərək, müəyyən bir müddət gözləmək mümkündür. Əgər müddət aşılırsa, timeout xətası baş verir.
 
 ```go
@@ -1396,6 +1363,7 @@ Bu nümunədə, 5 işçi funksiyası `worker()` funksiyası çağırılır. Wait
 **Ouput**:
 
 ```go
+
 Worker 5 starting
 Worker 3 starting
 Worker 4 starting
@@ -1408,3 +1376,5 @@ Worker 1 done
 Worker 4 done
 All workers done
 ```
+
+
