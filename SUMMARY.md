@@ -35,7 +35,7 @@
 * [Non-Blocking Channel Operations](non-blocking-channel-operations/README.md)
 * [Closing Channels](closing-channels/README.md)
 * [Range over Channels](range-over-channels/README.md)
-* [Timers](timers.md)
+* [Timers](timers/README.md)
 * [Ticker](ticker.md)
 * [Worker pools](worker-pools.md)
 * [WaitGroups](waitgroups.md)
