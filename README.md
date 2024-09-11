@@ -949,7 +949,11 @@ received two
 
 Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
 
-## Timeouts
+
+
+Bu nümunədə, select açar sözü istifadə edilərək, c1 və c2 kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
+
+### Timeouts
 
 Go dilində, **timeout** əməliyyatları xüsusilə şəbəkə əməliyyatları zamanı əhəmiyyətlidir. `time` paketi istifadə edilərək, müəyyən bir müddət gözləmək təmin edilə bilər. Əgər bu müddət keçərsə, timeout səhvi yaranır.
 
@@ -998,7 +1002,7 @@ Bu nümunədə, `c1` və `c2` adlı iki kanal yaradılır və mesaj göndərmə 
 
 Daha sonra, `select` açar sözü ilə `c2` kanalından mesaj gözlənilir. Bu dəfə `time.After` ilə 3 saniyə gözlənilir və nəticə mesajı alınır.
 
-#### Output:
+**Output:**
 
 ```go
 timeout 1
@@ -1007,9 +1011,7 @@ result 2
 
 Bu nümunədə `time.After` istifadə edərək timeout əməliyyatları icra edilir. İlk nümunədə, `c1` kanalına 1 saniyədən əvvəl mesaj göndərilmədiyi üçün timeout səhvi yaranır. İkinci nümunədə isə, `c2` kanalına mesaj vaxtında göndərildiyi üçün mesaj qəbul edilir və ekrana yazdırılır.
 
-
-
-## Non-Blocking Channel Operations
+### Non-Blocking Channel Operations
 
 Go dilində, channel-lar adətən bloklayan xüsusiyyətə malikdir, yəni bir goroutine bir channel-a mesaj göndərmək və ya almaq istədikdə həmin əməliyyat tamamlanana qədər gözləyir. Amma `select` açar sözü ilə channel-ların bloklanmadan işləməsi təmin edilə bilər.
 
@@ -1070,7 +1072,7 @@ func main() {
 
 Bu nümunədə iki channel (`messages` və `signals`) yaradılır və onlardan bloklanmadan necə məlumat göndərmək və qəbul etmək göstərilir.
 
-#### Output:
+**Output:**
 
 ```go
 no message received
@@ -1090,9 +1092,7 @@ Bu nümunədə:
 
 Bloklamadan əməliyyatlar `select` ilə kanal vasitəsilə sinxronlaşma və qarşılıqlı əlaqənin daha çevik formada həyata keçirilməsinə imkan yaradır.
 
-
-
-## Closing Channels
+### Closing Channels
 
 Go dilində, channel-ların bağlanması, məlumatların göndərilməsi və alınması prosesində sinxronizasiyanı təmin edir. `close` funksiyası vasitəsilə channel bağlanır. Bağlanmış bir channel-a mesaj göndərmək mümkün deyil və həmin channel-dan daha çox mesaj alınmaz.
 
@@ -1138,7 +1138,7 @@ Bu nümunədə:
 * `for` döngüsü ilə `jobs` channel-ına 3 iş göndərilir və hər göndərmə zamanı "sent job" mesajı göstərilir.
 * `jobs` channel-ı bağlandıqdan sonra `goroutine`, channel-dan bütün mesajları alır və son olaraq "received all jobs" mesajı göstərilir.
 
-#### Output:
+**Output:**
 
 ```go
 sent job 1
@@ -1153,9 +1153,7 @@ received all jobs
 
 Bu nümunə, Go dilində bir channel-a mesaj göndərdikdən sonra onu necə bağlayacağınızı və bağlanmış channel-dan daha çox mesaj alınmadığını göstərir. Bağlı bir channel-dan oxumağa davam edə bilərsiniz, lakin artıq yeni mesajlar göndərilə bilməz.
 
-
-
-## Range over Channels
+### Range over Channels
 
 Go dilində, `range` açar sözü channel-lar üzərində dövr etməyə imkan verir. Bu üsul ilə channel bağlanana qədər bütün mesajlar `for` dövrü ilə oxuna bilər.
 
@@ -1182,7 +1180,7 @@ Bu nümunədə:
 * `close` funksiyası ilə channel bağlanır.
 * Daha sonra, `range` açar sözü ilə for dövrü istifadə edərək, channel-dakı bütün mesajlar oxunur.
 
-#### Output:
+**Output:**
 
 ```go
 one
@@ -1191,9 +1189,7 @@ two
 
 Bu nümunədə `range` açar sözü ilə channel-dakı bütün mesajlar oxundu və `close` funksiyası ilə channel bağlandıqdan sonra belə, göndərilmiş bütün mesajlar alındı. `range` dövrü channel bağlanana qədər davam edir və channel-dan yeni mesajlar gəldikcə onları oxuyur.
 
-
-
-## Timers
+### Timers
 
 Go dilində timer-lər, müəyyən bir müddət keçdikdən sonra bir əməliyyatın yerinə yetirilməsini təmin etmək üçün istifadə olunur. `time` paketi daxilindəki `NewTimer` funksiyası ilə timer yaradıla bilər.
 
@@ -1231,7 +1227,7 @@ Bu nümunədə:
 * Birinci timer (`timer1`) 2 saniyədən sonra bitəcək şəkildə təyin olunur. Timer bitdikdə `<-timer1.C` ilə gözlənilir və "Timer 1 expired" mesajı ekrana yazdırılır.
 * İkinci timer (`timer2`) 1 saniyədən sonra sona çatacaq. `goroutine` ilə bu timer izlənir və əgər timer vaxtı bitərsə, "Timer 2 expired" mesajı çıxar. Lakin `Stop` funksiyası ilə bu timer vaxtı dolmadan dayandırılır və "Timer 2 stopped" mesajı ekrana yazdırılır.
 
-#### Output:
+**Output:**
 
 ```go
 Timer 1 expired
@@ -1240,9 +1236,7 @@ Timer 2 stopped
 
 Bu nümunədə, timer-lərdən biri müəyyən müddətdən sonra bitir və bir əməliyyat yerinə yetirilir, digəri isə vaxtı dolmadan əvvəl `Stop` funksiyası ilə dayandırılır. Timer-lərin bu cür idarə olunması zamanlama əməliyyatlarının nəzarətində faydalıdır.
 
-
-
-## Ticker
+### Ticker
 
 Go dilində, ticker'lər müəyyən bir müddət ərzində müəyyən aralıqlarla bir əməliyyatı yerinə yetirmək üçün istifadə olunur. `time` paketi daxilində yer alan `NewTicker` funksiyası istifadə edilərək, bir ticker yaradılır.
 
@@ -1289,9 +1283,7 @@ Tick at 2022-11-27 16:37:15.751064 +0300 MSK m=+1.501505306
 Ticker stopped
 ```
 
-
-
-## Worker Pools
+### Worker Pools
 
 Go dilində, worker pool'lar müəyyən bir işi yerinə yetirmək üçün təyin olunmuş işçi qrupudur. İşlər `channel`-a göndərilir və bu işlər işçilər tərəfindən emal olunur. Bu metod, paralel emal və işlərin işçilər arasında paylanması ilə iş yükünü balanslaşdırmağa kömək edir.
 
@@ -1359,9 +1351,7 @@ Worker 1 finished job 5
 
 Bu nümunə, işlərin işçilər arasında necə paylanmasını və nəticələrin necə geri alındığını göstərir.
 
-
-
-## WaitGroups
+### WaitGroups
 
 `WaitGroup` strukturu, Go dilində goroutine-lərin sinxronizasiyası üçün istifadə olunan bir mexanizmdir. Go-nun `sync` paketində tapılan bu struktur, birdən çox goroutine-in icrasını izləmək və onların hamısı tamamlandıqda müəyyən bir əməliyyatı yerinə yetirmək üçün imkan yaradır.
 
@@ -1411,7 +1401,7 @@ func main() {
 * `wg.Add(1)` hər işçi başlamazdan əvvəl sayğacı bir vahid artırır.
 * `wg.Wait()` bütün goroutine-lər bitmədən `main` funksiyasının bitməsini gecikdirir.
 
-**Nümunə Çıxış:**
+**Output:**
 
 ```go
 Worker 5 starting

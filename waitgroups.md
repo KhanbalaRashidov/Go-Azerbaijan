@@ -48,7 +48,7 @@ func main() {
 * `wg.Add(1)` hər işçi başlamazdan əvvəl sayğacı bir vahid artırır.
 * `wg.Wait()` bütün goroutine-lər bitmədən `main` funksiyasının bitməsini gecikdirir.
 
-**Nümunə Çıxış:**
+&#x20;**Output:**
 
 ```go
 Worker 5 starting
