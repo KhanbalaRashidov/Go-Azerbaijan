@@ -54,7 +54,7 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Tickers](./#ticker)
 * [Worker Pools](./#worker-pools)
 * [Wait Groups](./#waitgroups)
-* [Rate Limiting](./#ratelimiting)
+* [Rate Limiting](README%20\(1\).md#rate-limiting)
 * [Atomic Counters](README%20\(1\).md#atomic-counters)
 * [Sorting](README%20\(1\).md#sorting)
 * [Panic](README%20\(1\).md#panic)
@@ -897,7 +897,6 @@ Kanallar Go dilində bir çox vəziyyətdə istifadə oluna bilər, məsələn:
 4. Goroutine-lər arasında məlumat yarışlarını qarşısını almaq üçün
 5. Tapşırıqların koordinasiyası və sinxronizasiyası üçün
 
-
 ## Select
 
 Go dilində, select açar sözü bir neçə kanalı `(channel)` dinləyərək hansı kanalın mesaj göndərdiyini müəyyənləşdirə bilər. Bu xüsusiyyət kanalların sinxronizasiyasını asanlaşdırır və fərqli goroutin-lər arasında mesajlaşmanı idarə edir.
@@ -946,8 +945,7 @@ received one
 received two
 ```
 
-Bu nümunədə, select açar sözü istifadə edilərək, `c1`  və `c2` kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
-
+Bu nümunədə, select açar sözü istifadə edilərək, `c1` və `c2` kanallarını dinləyən bir for döngüsü yaradıldı. Bu, mesaj alım müddətinə əsaslanaraq fərqli kanalların dinlənilməsinə imkan verir. Nəticədə, goroutin-lər arasındakı mesajlaşma müəyyən bir qaydada həyata keçirilir və select açar sözü istifadə edilərək sinxronizasiya təmin edilir.
 
 ## Timeouts
 
@@ -1003,7 +1001,9 @@ timeout 1
 result 2
 ```
 
-***
+
+
+
 
 ## Non-Blocking Channel Operations
 
@@ -1077,7 +1077,9 @@ sent signal true
 received signal true
 ```
 
-***
+
+
+
 
 ## Closing Channels
 
@@ -1134,7 +1136,7 @@ received all jobs
 
 
 
-***
+
 
 ## Range over Channels
 
@@ -1166,7 +1168,9 @@ one
 two
 ```
 
-***
+
+
+
 
 ## Timers
 
@@ -1210,7 +1214,9 @@ Timer 1 fired
 Timer 2 stopped
 ```
 
-***
+
+
+
 
 ## Tickers
 
@@ -1257,7 +1263,9 @@ Tick at 2023-09-10 12:34:57.123456789 +0000 UTC m=+1.500123456
 Ticker stopped
 ```
 
-***
+
+
+
 
 ## Worker Pools
 
@@ -1319,6 +1327,8 @@ worker 2 finished job 5
 
 
 
+
+
 ## WaitGroups
 
 WaitGroup quruluşu Go dilində goroutinlər arasında sinxronizasiya təmin etmək üçün istifadə edilən bir mexanizmdir. WaitGroup quruluşu Go-nun `sync` paketində yerləşir.
@@ -1376,6 +1386,7 @@ Worker 1 done
 Worker 4 done
 All workers done
 ```
+<<<<<<< HEAD
 
 
 ## Rate Limiting
@@ -1424,3 +1435,5 @@ request 5 2023-05-23 15:56:02.267025 +0300 +03 m=+1.001173793
 ```
 
 Bu şəkildə, Rate Limiting istifadə edərək sorğular müəyyən bir sürətlə işlənir.
+=======
+>>>>>>> 25d1aa188516baa4031c9907f9fc59ab5bc7e942
