@@ -45,3 +45,4 @@
 * [Panic](panic/README.md)
 * [Defer](defer/README.md)
 * [String Functions](string-functions/README.md)
+* [Recover](recover/README.md)

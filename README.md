@@ -1639,6 +1639,49 @@ Bu nümunədə, `os.Open` funksiyası istifadə edilərək "example.txt" faylı 
 Burada diqqət edilməli mühüm bir məqam, `defer` ifadəsinin ən sona yazılmamasıdır. `defer` ifadəsi, bağlanacaq olan faylı açan ifadə ilə eyni blokda olmalıdır. Əks halda, `defer` ifadəsi funksiyanın sonuna qədər gözləməyə davam edəcəkdir.
 
 
+
+Aşağıda `Recover` mövzusunda kod və şərhlərin azərbaycanca tərcüməsi, çıxış hissəsi isə ingiliscədir:
+
+## Recover
+
+`recover` funksiyası, bir Go proqramının işləmə müddətində meydana gələn panic-ləri idarə etmək üçün istifadə olunur. Əgər bir panic baş verərsə, `recover` funksiyası panic-in baş verdiyi funksiyanın içində çağırılarsa, panic səbəbindən dayandırılmış əməliyyatın idarəsini geri alır və proqramın normal şəkildə davam etməsini təmin edir.
+
+`recover` funksiyası adətən `defer` ifadələri ilə birlikdə istifadə olunur. Bu sayədə, mümkün bir panic vəziyyətində proqramın idarəsi `defer` ifadələrindəki əməliyyatlardan ən sonuncusu olan `recover` funksiyasına ötürülür və beləliklə proqramın davam etməsi təmin edilir.
+
+Nümunə olaraq, bir panic baş verdikdə proqramın işləməsini dayandırmaq əvəzinə, `recover` funksiyası vasitəsilə proqramın normal şəkildə davam etməsi təmin edilə bilər:
+
+```golang
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Program starting...")
+
+    // Defer ifadəsi istifadə edərək panic vəziyyətlərində işlədiləcək funksiyanı müəyyən edirik.
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Panic occurred: This is a panic!:", r)
+        }
+    }()
+
+    fmt.Println("Program continues...")
+
+    // Burada bilərəkdən panic yaradırıq.
+    panic("This is a panic")
+}
+```
+
+Bu nümunədə, `panic` ifadəsi istifadə edilərək bilərəkdən bir panic yaradılır. `defer` ifadəsi istifadə edərək panic vəziyyətlərində işlədiləcək bir funksiya müəyyən edilir. `recover` funksiyası, funksiyanın içində çağırıldığı zaman, panic vəziyyətindən geri dönən dəyəri alır və `if` strukturu istifadə edilərək bu dəyər ilə işləyir.
+
+```
+Program starting...
+Program continues...
+Panic occurred: This is a panic!
+This is a panic
+```
+
+
 # String Functions
 
 Golang, string məlumatları üzərində əməliyyatlar aparmaq üçün bir çox hazır funksiyalar təqdim edir. Bu funksiyalar, string məlumatlarını parçalamaq, birləşdirmək, müqayisə etmək, axtarmaq, dəyişdirmək və daha bir çox əməliyyat aparmaq üçün istifadə edilə bilər.
