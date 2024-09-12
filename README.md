@@ -54,8 +54,8 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Tickers](./#ticker)
 * [Worker Pools](./#worker-pools)
 * [Wait Groups](./#waitgroups)
-* [Rate Limiting](README%20\(1\).md#rate-limiting)
-* [Atomic Counters](README%20\(1\).md#atomic-counters)
+* [Rate Limiting](./#rate-limiting)
+* [Atomic Counters](./#atomic-counters)
 * [Sorting](README%20\(1\).md#sorting)
 * [Panic](README%20\(1\).md#panic)
 * [Defer](README%20\(1\).md#defer)
@@ -1001,10 +1001,6 @@ timeout 1
 result 2
 ```
 
-
-
-
-
 ## Non-Blocking Channel Operations
 
 Go dilində, kanallar adətən bloklama xüsusiyyətinə malikdir. Yəni, bir goroutine bir kanala mesaj göndərmək və ya mesaj almaq istəyirsə, həmin əməliyyat tamamlanana qədər dayanar. Lakin, `select` açar sözü istifadə edilərək, non-blocking əməliyyatlar da həyata keçirmək mümkündür.
@@ -1077,10 +1073,6 @@ sent signal true
 received signal true
 ```
 
-
-
-
-
 ## Closing Channels
 
 Go dilində, kanalların bağlanması, mesajların göndərilməsi və alınması arasında sinxronizasiya yaradır. `close` funksiyası ilə bir kanal bağlana bilər. Bağlanan kanala daha artıq mesaj göndərilə bilməz və bu kanaldan mesajlar alınmaz.
@@ -1134,10 +1126,6 @@ received job 3
 received all jobs
 ```
 
-
-
-
-
 ## Range over Channels
 
 Go-da `range` açar sözü istifadə edərək kanaldan mesajlar almaq mümkündür. Bu zaman kanal açıq qaldığı müddətdə mesajlar qəbul edilir. Kanal bağlandıqda isə `range` döngüsü dayanır.
@@ -1167,10 +1155,6 @@ Bu nümunədə, `queue` adlı bir kanal yaradılır və iki mesaj kanala yerlə�
 one
 two
 ```
-
-
-
-
 
 ## Timers
 
@@ -1213,10 +1197,6 @@ Bu nümunədə, iki timer yaradılır. Birincisi 2 saniyə sonra işə düşür 
 Timer 1 fired
 Timer 2 stopped
 ```
-
-
-
-
 
 ## Tickers
 
@@ -1262,10 +1242,6 @@ Tick at 2023-09-10 12:34:56.623456789 +0000 UTC m=+1.000123456
 Tick at 2023-09-10 12:34:57.123456789 +0000 UTC m=+1.500123456
 Ticker stopped
 ```
-
-
-
-
 
 ## Worker Pools
 
@@ -1325,10 +1301,6 @@ worker 1 finished job 4
 worker 2 finished job 5
 ```
 
-
-
-
-
 ## WaitGroups
 
 WaitGroup quruluşu Go dilində goroutinlər arasında sinxronizasiya təmin etmək üçün istifadə edilən bir mexanizmdir. WaitGroup quruluşu Go-nun `sync` paketində yerləşir.
@@ -1387,7 +1359,6 @@ Worker 4 done
 All workers done
 ```
 
-
 ## Rate Limiting
 
 Rate Limiting, bir API və ya xidmətin istifadəçinin müəyyən bir zaman ərzində edə biləcəyi sorğu sayını məhdudlaşdırmaq üçün istifadə edilən bir metoddur. Bu metod, tətbiqin və ya xidmətin həddindən artıq yüklənməsinin qarşısını almaq üçün istifadə oluna bilər.
@@ -1435,7 +1406,6 @@ request 5 2023-05-23 15:56:02.267025 +0300 +03 m=+1.001173793
 
 Bu şəkildə, Rate Limiting istifadə edərək sorğular müəyyən bir sürətlə işlənir.
 
-
 ## Atomic Counters
 
 Atomic Counters mövzusu, Go dilində paralelliyi idarə etmək üçün istifadə olunan bir mövzudur. Çoxsaylı Go proqramları bir neçə goroutine tərəfindən paylaşılan verilərlə işlədiyinə görə, bu verilərin eyni anda bir neçə goroutine tərəfindən dəyişdirilməsi labüddür. Bu dəyişikliklər düzgün idarə edilmədikdə, proqram gözlənilməz şəkildə işləyə bilər.
@@ -1471,6 +1441,3 @@ func main() {
 Bu nümunədə, `counter` adlı dəyişkən `int64` tipində bir Atomic Counter olaraq təyin olunur və başlanğıcda 0 dəyəri ilə müəyyən edilir. Daha sonra, 10 goroutine yaradılır və hər biri `atomic.AddInt64` metodundan istifadə edərək `counter` dəyişkənini artırır. Bu metod `&counter` ünvanını alır və `counter` dəyişkəninə atomik şəkildə 1 əlavə edir.
 
 Nəticədə, Atomic Counter veri quruluşu, çoxsaylı goroutine-lər tərəfindən paylaşılan dəyişkənlərin təhlükəsiz şəkildə dəyişdirilməsini təmin edir və paralellik idarəsində mühüm rol oynayır.
-
-
-
