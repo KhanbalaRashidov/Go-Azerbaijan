@@ -42,7 +42,7 @@ Bu nümunədə, `Person` adlı bir məlumat strukturu təyin edilmişdir. Sonra,
 
 Daha sonra, `template.Must()` funksiyası istifadə edilərək yeni bir `Template` obyekti yaradılır və şablon mətnini `Parse()` funksiyası ilə bu obyektə təyin edilir. Sonra, `Execute()` funksiyası istifadə edilərək, `Template` obyekti, məlumat strukturu və `os.Stdout` (standart çıxış) printeri istifadə edilərək işlənir və nəticə ekrana çıxarılır.
 
-Proqramın çıxışı belə olacaq:
+Output:
 
 ```go
 My name is John and I am 30 years old. I live in USA.
