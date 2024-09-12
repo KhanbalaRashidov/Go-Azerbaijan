@@ -39,4 +39,5 @@
 * [Ticker](ticker/README.md)
 * [Worker pools](worker-pools/README.md)
 * [WaitGroups](waitgroups/README.md)
-* [RateLimiting](ratelimiting/README.md)
+* [Rate Limiting](ratelimiting/README.md)
+* [Atomic Counter](atomic-counter/README.md)
