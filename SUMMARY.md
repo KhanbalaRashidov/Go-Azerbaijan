@@ -42,3 +42,4 @@
 * [Rate Limiting](ratelimiting/README.md)
 * [Atomic Counter](atomic-counter/README.md)
 * [Sorting](sorting/README.md)
+* [Panic](panic/README.md)
