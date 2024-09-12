@@ -41,3 +41,4 @@
 * [WaitGroups](waitgroups/README.md)
 * [Rate Limiting](ratelimiting/README.md)
 * [Atomic Counter](atomic-counter/README.md)
+* [Sorting](sorting/README.md)
