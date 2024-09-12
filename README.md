@@ -1,12 +1,10 @@
 # Info
 
-## Info
-
 Bu repository Go dilini tez öyrənmək istəyənlər üçün hazırlanmışdır. Ümumilikdə mövzuları nümunələrlə izah edərək dilin əsas strukturlarını əhatə edir. Eyni zamanda, Go dilini öyrənmək istəyənlər üçün müntəzəm resurs təmin etmək məqsədi daşıyır. Hər bir mövzu təsviri və başa düşülən şəkildə əhatə olunur ki, oxucular Go dilini asanlıqla və tez öyrənə bilsinlər.
 
 Repository-ni bəyənirsinizsə, ulduz qoyub sosial media hesablarınızda paylaşa bilərsiniz ki, daha çox insana çatsın ⭐️.
 
-### **Bu Go nədir?**
+## **Bu Go nədir?**
 
 Golang (digər adı Go) 2007-ci ildən Google tərəfindən hazırlanmış açıq mənbəli proqramlaşdırma dilidir. O, əsasən alt sistem proqramlaşdırması üçün nəzərdə tutulmuşdur və tərtib edilə bilən və statik olaraq yazılmış dildir. İlk versiya 2009-cu ilin noyabrında buraxıldı. Onun tərtibçisi "gc" (Go Compiler) bir çox əməliyyat sistemi üçün açıq mənbə kimi işlənib hazırlanmışdır.
 
@@ -39,7 +37,7 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Closures](./#closures)
 * [Recursion](./#recursion)
 * [Pointers](./#pointers)
-* [String Functions](./#strings-and-runes)
+* [String and Runes](./#strings-and-runes)
 * [Structs](./#structs)
 * [Methods](./#methods)
 * [Interfaces](./#interfaces)
@@ -49,7 +47,7 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Channel](./#channel)
 * [Select](./#select)
 * [Timeouts](./#timeouts)
-* [Non-Blocking Channel](README%20\(1\).md#non-blocking-channel)
+* [Non-Blocking Channel](./#non-blocking-channel)
 * [Closing Channels](./#closing-channels)
 * [Range over Channels](./#range-over-channels)
 * [Timers](./#timers)
@@ -60,9 +58,9 @@ Nəticədə, Go dilinin əsas xüsusiyyətlərinə sürətli tərtib prosesi, y�
 * [Atomic Counters](./#atomic-counters)
 * [Sorting](README%20\(1\).md#sorting)
 * [Panic](./#panic)
-* [Defer](README%20\(1\).md#defer)
+* [Defer](./md#defer)
 * [Recover](README%20\(1\).md#recover)
-* [Strings and Runes](README%20\(1\).md#strings-and-runes)
+* [String Functions](./#string-functions)
 * [Text Templates](README%20\(1\).md#text-templates)
 * [JSON](README%20\(1\).md#json)
 
