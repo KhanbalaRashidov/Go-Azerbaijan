@@ -46,3 +46,4 @@
 * [Defer](defer/README.md)
 * [String Functions](string-functions/README.md)
 * [Recover](recover/README.md)
+* [Text Templates](text-templates/README.md)
