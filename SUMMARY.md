@@ -4,6 +4,7 @@
 * [Values](values/README.md)
 * [Variables](variables/README.md)
 * [Comments](comments/README.md)
+* [Aritmetic Operators](aritmetic-operators/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
 * [For](for/README.md)
