@@ -6,6 +6,7 @@
 * [Values](values/README.md)
 * [Variables](variables/README.md)
 * [Assignment Operators](assignments-oprator/README.md)
+* [Type Conversion](type-conversion/README.md)
 * [Comments](comments/README.md)
 * [Arithmetic Operators](aritmetic-operators/README.md)
 * [Logical Operators](logical-operators/README.md)
