@@ -5,6 +5,7 @@
 * [First Go Application](first-app/README.md)
 * [Values](values/README.md)
 * [Variables](variables/README.md)
+* [Assignment Operators](assignments-oprator/README.md)
 * [Comments](comments/README.md)
 * [Arithmetic Operators](aritmetic-operators/README.md)
 * [Logical Operators](logical-operators/README.md)
