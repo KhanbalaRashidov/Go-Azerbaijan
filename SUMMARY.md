@@ -8,6 +8,7 @@
 * [Comments](comments/README.md)
 * [Arithmetic Operators](aritmetic-operators/README.md)
 * [Logical Operators](logical-operators/README.md)
+* [Relational Operators](relational-operators/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
 * [For](for/README.md)
