@@ -1,10 +1,12 @@
 # Table of contents
 
 * [Info](README.md)
+* [Go Compiler Installations](go-compiler-install/README.md)
 * [Values](values/README.md)
 * [Variables](variables/README.md)
 * [Comments](comments/README.md)
-* [Aritmetic Operators](aritmetic-operators/README.md)
+* [Arithmetic Operators](aritmetic-operators/README.md)
+* [Logical Operators](logical-operators/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
 * [For](for/README.md)
