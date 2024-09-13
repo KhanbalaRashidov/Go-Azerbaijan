@@ -25,6 +25,7 @@
 * [Functions](functions/function.md)
 * [Variadic function](functions/variadic-function.md)
 * [Closures](functions/closures.md)
+* [Anonymous](functions/anonim-function.md)
 * [Recursion](functions/recursion.md)
 
 ***
