@@ -3,6 +3,7 @@
 * [Info](README.md)
 * [Values](values/README.md)
 * [Variables](variables/README.md)
+* [Comments](comments/README.md)
 * [Constants](constants/README.md)
 * [if/else](if-else/README.md)
 * [For](for/README.md)
