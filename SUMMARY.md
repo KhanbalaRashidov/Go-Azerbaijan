@@ -3,6 +3,7 @@
 * [Info](README.md)
 * [Go Compiler Installations](go-compiler-install/README.md)
 * [First Go Application](first-app/README.md)
+* [Build on Different Platforms](buildin-different-platform/README.md)
 * [Values](values/README.md)
 * [Variables](variables/README.md)
 * [Assignment Operators](assignments-oprator/README.md)
