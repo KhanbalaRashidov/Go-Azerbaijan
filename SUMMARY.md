@@ -35,6 +35,7 @@
 * [Pointers](pointers/README.md)
 * [Strings and Runes](strings_and_runs/README.md)
 * [Structs](structs/README.md)
+* [Anonymous struct](anonim-struct/README.md)
 * [Method](method/README.md)
 * [Interface](interface/README.md)
 * [Struct embedding](struct-embedding/README.md)
