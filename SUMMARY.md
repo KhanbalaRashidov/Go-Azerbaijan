@@ -38,6 +38,7 @@
 * [Anonymous struct](anonim-struct/README.md)
 * [Method](method/README.md)
 * [Interface](interface/README.md)
+* [Dynamic Variables](dynamic-variables/README.md)
 * [Struct embedding](struct-embedding/README.md)
 * [Errors](errors/README.md)
 * [Goroutines](goroutines/README.md)
