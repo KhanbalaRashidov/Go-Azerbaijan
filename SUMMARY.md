@@ -39,6 +39,7 @@
 * [Method](method/README.md)
 * [Interface](interface/README.md)
 * [Dynamic Variables](dynamic-variables/README.md)
+* [Generics](generics/README.md)
 * [Struct embedding](struct-embedding/README.md)
 * [Errors](errors/README.md)
 * [Goroutines](goroutines/README.md)
