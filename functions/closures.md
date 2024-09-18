@@ -17,7 +17,7 @@ fmt.Println(increment())
 fmt.Println(increment())
 ```
 
-Bu örnekte, outer adlı bir fonksiyon tanımlanır. Fonksiyon, bir iç fonksiyon döndürür ve iç fonksiyon, count adlı bir değişkene erişim sağlar. increment adlı bir değişkene outer() fonksiyonu atanır ve bu değişken ile iç fonksiyon çalıştırılır. count değişkeni, increment() çağrıldıkça artar ve her seferinde artışı ekrana yazdırılır.
+Bu nümunədə, `outer` adlı bir funksiya təyin edilir. Funksiya, bir daxili funksiya qaytarır və daxili funksiya, `count` adlı bir dəyişənə giriş imkanı əldə edir. `increment` adlı bir dəyişənə `outer()` funksiyası təyin edilir və bu dəyişən vasitəsilə daxili funksiya işlədilir. `count` dəyişəni hər dəfə `increment()` çağırıldıqda artır və hər çağırışda artım ekrana yazdırılır.
 
 ```go
 func adder(a int) func(int) int {
