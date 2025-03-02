@@ -75,7 +75,7 @@ lastInsertID, err := result.LastInsertId()
 if err != nil {
 	log.Fatal("Son əlavə olunan ID əldə edilərkən xəta:", err)
 }
-fmt.Println("Əlavə olunan kaydın ID-si:", lastInsertID)
+fmt.Println("Əlavə olunan məlumatınß ID-si:", lastInsertID)
 ```
 
 ### b) Məlumat Oxumaq (Read)
@@ -118,9 +118,9 @@ if err != nil {
 // Neçə sətirin yeniləndiyini öyrənirik
 affectedRows, err := res.RowsAffected()
 if err != nil {
-	log.Fatal("Etkilenen satır sayını əldə edərkən xəta:", err)
+	log.Fatal("Əlavə edilən sətir sayını əldə edərkən xəta:", err)
 }
-fmt.Printf("Yenilənən satır sayı: %d\n", affectedRows)
+fmt.Printf("Yenilənən sətir sayı: %d\n", affectedRows)
 ```
 
 ### d) Məlumat Silmək (Delete)
@@ -138,7 +138,7 @@ deletedRows, err := res.RowsAffected()
 if err != nil {
 	log.Fatal("Silinən satır sayını əldə edərkən xəta:", err)
 }
-fmt.Printf("Silinən satır sayı: %d\n", deletedRows)
+fmt.Printf("Silinən sətir sayı: %d\n", deletedRows)
 ```
 
 ---
@@ -160,8 +160,7 @@ users := []struct {
 	name  string
 	email string
 }{
-	{"Mehmet", "mehmet@example.com"},
-	{"Ayşə", "ayse@example.com"},
+	{"Khanbala", "khanbala@example.com"},
 }
 
 for _, user := range users {
@@ -189,14 +188,14 @@ if err != nil {
 }
 
 // İlk əməliyyat: məlumat əlavə etmək
-_, err = tx.Exec("INSERT INTO users (name, email) VALUES (?, ?)", "Emre", "emre@example.com")
+_, err = tx.Exec("INSERT INTO users (name, email) VALUES (?, ?)", "Mushfig", "mushfig@example.com")
 if err != nil {
 	tx.Rollback() // Xəta olduqda bütün əməliyyatları geri alırıq
 	log.Fatal("Transaction zamanı xəta (INSERT):", err)
 }
 
 // İkinci əməliyyat: məlumat yeniləmək
-_, err = tx.Exec("UPDATE users SET email = ? WHERE name = ?", "emre_yeni@example.com", "Emre")
+_, err = tx.Exec("UPDATE users SET email = ? WHERE name = ?", "mushfig_yeni@example.com", "Mushfig")
 if err != nil {
 	tx.Rollback()
 	log.Fatal("Transaction zamanı xəta (UPDATE):", err)
