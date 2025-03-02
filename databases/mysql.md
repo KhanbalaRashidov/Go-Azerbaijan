@@ -65,7 +65,7 @@ Yeni məlumat əlavə etmək üçün `INSERT` sorğusundan istifadə edirik.
 ```go
 // Məlumat əlavə etmək nümunəsi
 query := "INSERT INTO users (name, email) VALUES (?, ?)"
-result, err := db.Exec(query, "Ahmet", "ahmet@example.com")
+result, err := db.Exec(query, "Khanbala", "khanbala@example.com")
 if err != nil {
 	log.Fatal("Məlumat əlavə edilərkən xəta baş verdi:", err)
 }
@@ -136,7 +136,7 @@ if err != nil {
 
 deletedRows, err := res.RowsAffected()
 if err != nil {
-	log.Fatal("Silinən satır sayını əldə edərkən xəta:", err)
+	log.Fatal("Silinən sətir sayını əldə edərkən xəta:", err)
 }
 fmt.Printf("Silinən sətir sayı: %d\n", deletedRows)
 ```
