@@ -56,6 +56,7 @@
 * [WaitGroups](waitgroups/README.md)
 * [Rate Limiting](ratelimiting/README.md)
 * [Atomic Counter](atomic-counter/README.md)
+* [Mutex](mutex/README.md)
 * [Sorting](sorting/README.md)
 * [Panic](panic/README.md)
 * [Defer](defer/README.md)
