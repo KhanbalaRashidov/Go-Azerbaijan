@@ -7,12 +7,12 @@
 Goroutinlər eyni resurs üzərində eyni zamanda əməliyyatlar yerinə yetirməyə çalışarsa, bu zaman **race condition** (rəqabət vəziyyəti) yaranır. Bu halda məlumatların ardıcıllığı pozula bilər və gözlənilməz nəticələr ortaya çıxa bilər. **Mutex** istifadə edərək, hər hansı bir goroutine-in digərinə mane olmadan resursa daxil olmasını təmin edə bilərsiniz.
 
 Mutex iki əsas funksiyaya malikdir:
-- **Lock()**: Mutex kilidini açır. Bir goroutine bu funksiyanı çağırdıqdan sonra Mutex kilidlənir və digər goroutinlər həmin resursa giriş əldə edə bilməzlər.
+- **Lock()**: Mutex-i kilidləyir. Bir goroutine bu funksiyanı çağırdıqdan sonra Mutex kilidlənir və digər goroutinlər həmin resursa giriş əldə edə bilməzlər.
 - **Unlock()**: Mutex kilidini sərbəst buraxır. Mutex kilidindən sonra digər goroutinlər resursa giriş əldə edə bilər.
 
 ## Mutex Nümunəsi
 
-Aşağıdakı nümunədə, Mutex istifadə edərək iki goroutine-in eyni resursa girişini sinxronizasiya edirik:
+Aşağıdakı nümunədə, Mutex istifadə edərək goroutinlərin eyni resursa girişini sinxronizasiya edirik:
 
 ```go
 package main
@@ -20,7 +20,6 @@ package main
 import (
     "fmt"
     "sync"
-    "time"
 )
 
 var (
